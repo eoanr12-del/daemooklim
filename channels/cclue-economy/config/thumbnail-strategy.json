@@ -1,0 +1,14 @@
+{
+  "count": 3,
+  "art_styles": ["photorealistic", "anime"],
+  "color_palette": "dark",
+  "emotions": ["tension", "shock"],
+  "text_space": "bottom-half",
+  "face_style": "exaggerated",
+  "brand": {
+    "colors": ["네이비", "골드"],
+    "mascot": false,
+    "fixed_layout": null
+  },
+  "benchmark_analysis": null
+}

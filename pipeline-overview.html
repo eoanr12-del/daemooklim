@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>유튜브 대본 자동 제작 파이프라인</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #0f0f1a;
+    color: #e0e0e0;
+    overflow-x: hidden;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    text-align: center;
+    padding: 80px 20px 60px;
+    background: linear-gradient(180deg, #1a1a2e 0%, #0f0f1a 100%);
+    position: relative;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #6c63ff, transparent);
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #6c63ff, #ff6584);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    font-size: 1.15rem;
+    color: #aaa;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* ── Metaphor Section ── */
+  .metaphor {
+    max-width: 800px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+  }
+  .metaphor-card {
+    background: linear-gradient(135deg, #1e1e36, #2a1f3d);
+    border: 1px solid #3a3a5c;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+  }
+  .metaphor-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    color: #fff;
+  }
+  .metaphor-card h2 span { color: #6c63ff; }
+  .metaphor-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .metaphor-item {
+    background: #2a2a4a;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .metaphor-item .icon { font-size: 1.4rem; }
+  .metaphor-arrow { font-size: 1.4rem; color: #6c63ff; }
+  .metaphor-desc {
+    color: #999;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-top: 16px;
+  }
+
+  /* ── Pipeline ── */
+  .pipeline {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+  }
+  .pipeline > h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: #fff;
+  }
+  .pipeline > p {
+    text-align: center;
+    color: #888;
+    margin-bottom: 50px;
+    font-size: 0.95rem;
+  }
+
+  /* ── Step Card ── */
+  .step {
+    position: relative;
+    margin-bottom: 0;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  /* Vertical Line */
+  .step-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 56px;
+  }
+  .step-number {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #fff;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .step-line {
+    width: 3px;
+    flex: 1;
+    min-height: 40px;
+    background: #2a2a4a;
+  }
+
+  .step-content {
+    flex: 1;
+    padding-bottom: 40px;
+  }
+
+  .step-card {
+    background: #1a1a2e;
+    border: 1px solid #2a2a4a;
+    border-radius: 16px;
+    padding: 28px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .step-card:hover {
+    border-color: #6c63ff44;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(108, 99, 255, 0.1);
+  }
+  .step-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .step-card h3 .emoji { font-size: 1.4rem; }
+  .step-subtitle {
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+  }
+  .step-explain {
+    background: #252545;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #ccc;
+    border-left: 3px solid;
+  }
+
+  /* Agent Chips */
+  .agents-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .agent-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    border: 1px solid;
+  }
+  .agent-chip.sonnet { background: #1a2a1a; border-color: #2a6a2a; color: #6ddb6d; }
+  .agent-chip.opus { background: #2a1a2a; border-color: #6a2a6a; color: #db6ddb; }
+  .agent-chip.python { background: #2a2a1a; border-color: #6a6a2a; color: #dbdb6d; }
+  .agent-chip.pd { background: #1a2a3a; border-color: #2a5a7a; color: #6dafdb; }
+
+  .agent-chip .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+  }
+  .agent-chip.sonnet .dot { background: #6ddb6d; }
+  .agent-chip.opus .dot { background: #db6ddb; }
+  .agent-chip.python .dot { background: #dbdb6d; }
+  .agent-chip.pd .dot { background: #6dafdb; }
+
+  /* Parallel badge */
+  .parallel-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #2a1f3d;
+    color: #b89aff;
+    font-size: 0.78rem;
+    padding: 4px 10px;
+    border-radius: 8px;
+    margin-left: 4px;
+  }
+
+  /* Output */
+  .output-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .output-file {
+    background: #1e2a1e;
+    border: 1px solid #2a4a2a;
+    color: #8ddb8d;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-family: monospace;
+  }
+
+  /* Data Flow Arrow */
+  .data-flow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 10px 16px;
+    background: #1a1a30;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    color: #aaa;
+    flex-wrap: wrap;
+  }
+  .data-flow .from { color: #ff6584; font-weight: 500; }
+  .data-flow .arrow { color: #6c63ff; }
+  .data-flow .to { color: #63ffa5; font-weight: 500; }
+
+  /* Agent IO Card */
+  .agent-io {
+    margin-top: 14px;
+    border: 1px solid #2a2a4a;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #15152a;
+  }
+  .agent-io-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #fff;
+    border-bottom: 1px solid #2a2a4a;
+  }
+  .agent-io-header .agent-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+  .agent-io-header .agent-icon.sonnet-bg { background: #1a3a1a; border: 1px solid #2a6a2a; }
+  .agent-io-header .agent-icon.opus-bg { background: #2a1a2a; border: 1px solid #6a2a6a; }
+  .agent-io-header .agent-icon.python-bg { background: #2a2a1a; border: 1px solid #6a6a2a; }
+  .agent-io-header .agent-icon.pd-bg { background: #1a2a3a; border: 1px solid #2a5a7a; }
+  .agent-io-body {
+    display: flex;
+    align-items: stretch;
+  }
+  .agent-io-in, .agent-io-out {
+    flex: 1;
+    padding: 12px 16px;
+  }
+  .agent-io-in {
+    border-right: 1px solid #2a2a4a;
+  }
+  .agent-io-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  .agent-io-in .agent-io-label { color: #ff6584; }
+  .agent-io-out .agent-io-label { color: #63ffa5; }
+  .agent-io-files {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .agent-io-file {
+    font-size: 0.8rem;
+    font-family: monospace;
+    padding: 3px 8px;
+    border-radius: 6px;
+    display: inline-block;
+    width: fit-content;
+  }
+  .agent-io-in .agent-io-file {
+    background: #2a1a1e;
+    color: #ff8a9e;
+  }
+  .agent-io-out .agent-io-file {
+    background: #1a2a1e;
+    color: #8ddb8d;
+  }
+  .agent-io-note {
+    font-size: 0.75rem;
+    color: #777;
+    margin-top: 4px;
+    font-style: italic;
+  }
+
+  /* ── Detail Panel (toggle) ── */
+  .step-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+  .step-detail.open {
+    max-height: 800px;
+    opacity: 1;
+    margin-top: 16px;
+  }
+  .detail-inner {
+    background: #15152a;
+    border: 1px solid #252545;
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: #bbb;
+  }
+  .detail-inner strong { color: #fff; }
+  .detail-inner ul { margin-left: 20px; margin-top: 6px; }
+  .detail-inner li { margin-bottom: 4px; }
+  .click-hint {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 8px;
+    text-align: right;
+  }
+
+  /* ── Color per step ── */
+  .color-collect .step-number { background: linear-gradient(135deg, #ff6b6b, #ee5a24); }
+  .color-collect .step-explain { border-color: #ff6b6b; }
+
+  .color-analyze .step-number { background: linear-gradient(135deg, #ffa94d, #e67e22); }
+  .color-analyze .step-explain { border-color: #ffa94d; }
+
+  .color-data .step-number { background: linear-gradient(135deg, #ffd43b, #f1c40f); }
+  .color-data .step-explain { border-color: #ffd43b; }
+
+  .color-strategy .step-number { background: linear-gradient(135deg, #69db7c, #27ae60); }
+  .color-strategy .step-explain { border-color: #69db7c; }
+
+  .color-outline .step-number { background: linear-gradient(135deg, #4ecdc4, #1abc9c); }
+  .color-outline .step-explain { border-color: #4ecdc4; }
+
+  .color-draft .step-number { background: linear-gradient(135deg, #74b9ff, #3498db); }
+  .color-draft .step-explain { border-color: #74b9ff; }
+
+  .color-review .step-number { background: linear-gradient(135deg, #a29bfe, #6c5ce7); }
+  .color-review .step-explain { border-color: #a29bfe; }
+
+  .color-done .step-number { background: linear-gradient(135deg, #fd79a8, #e84393); }
+  .color-done .step-explain { border-color: #fd79a8; }
+
+  /* ── Big Picture (Overview Diagram) ── */
+  .overview {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+  }
+  .overview h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+  .overview-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .overview-node {
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    min-width: 80px;
+  }
+  .overview-arrow {
+    color: #555;
+    font-size: 1.2rem;
+  }
+
+  /* ── Legend ── */
+  .legend {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+  }
+  .legend h3 {
+    text-align: center;
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+  .legend-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #1a1a2e;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+  }
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #555;
+    font-size: 0.8rem;
+    border-top: 1px solid #1a1a2e;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.6rem; }
+    .hero p { font-size: 1rem; }
+    .step { gap: 14px; }
+    .step-timeline { width: 42px; }
+    .step-number { width: 42px; height: 42px; font-size: 1rem; }
+    .step-card { padding: 20px; }
+    .step-card h3 { font-size: 1.05rem; }
+    .metaphor-row { flex-direction: column; }
+    .metaphor-arrow { transform: rotate(90deg); }
+    .overview-flow { flex-direction: column; gap: 4px; }
+    .overview-arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════ Hero ════════════ -->
+<section class="hero">
+  <h1>유튜브 대본 자동 제작기</h1>
+  <p>
+    유튜브 링크만 넣으면, AI가 알아서<br>
+    분석하고, 전략 짜고, 대본까지 써주는 시스템이에요.
+  </p>
+</section>
+
+<!-- ════════════ Metaphor ════════════ -->
+<section class="metaphor">
+  <div class="metaphor-card">
+    <h2>쉽게 말하면, <span>AI 방송국</span>이에요</h2>
+    <div class="metaphor-row">
+      <div class="metaphor-item"><span class="icon">🎬</span> PD (총감독)</div>
+      <div class="metaphor-arrow">+</div>
+      <div class="metaphor-item"><span class="icon">👨‍💼</span> 전문 스태프 6명</div>
+      <div class="metaphor-arrow">=</div>
+      <div class="metaphor-item"><span class="icon">📄</span> 완성 대본</div>
+    </div>
+    <p class="metaphor-desc">
+      PD가 전체 진행을 관리하고,<br>
+      각 단계마다 담당 스태프(AI)가 자기 일을 해서 결과물을 넘겨줘요.<br>
+      마치 방송국에서 프로그램 하나 만드는 것처럼요.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════ Overview Flow ════════════ -->
+<section class="overview" style="margin-top: 60px;">
+  <h2>전체 흐름 한눈에 보기</h2>
+  <div class="overview-flow">
+    <div class="overview-node" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);">수집</div>
+    <div class="overview-arrow">→</div>
+    <div class="overview-node" style="background: linear-gradient(135deg, #ffa94d, #e67e22);">분석</div>
+    <div class="overview-arrow">→</div>
+    <div class="overview-node" style="background: linear-gradient(135deg, #ffd43b, #f1c40f); color: #333;">데이터</div>
+    <div class="overview-arrow">→</div>
+    <div class="overview-node" style="background: linear-gradient(135deg, #69db7c, #27ae60);">전략</div>
+    <div class="overview-arrow">→</div>
+    <div class="overview-node" style="background: linear-gradient(135deg, #4ecdc4, #1abc9c);">뼈대</div>
+    <div class="overview-arrow">→</div>
+    <div class="overview-node" style="background: linear-gradient(135deg, #74b9ff, #3498db);">집필</div>
+    <div class="overview-arrow">→</div>
+    <div class="overview-node" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">검수</div>
+    <div class="overview-arrow">→</div>
+    <div class="overview-node" style="background: linear-gradient(135deg, #fd79a8, #e84393);">완성!</div>
+  </div>
+</section>
+
+<!-- ════════════ Legend ════════════ -->
+<section class="legend">
+  <h3>등장하는 스태프들</h3>
+  <div class="legend-grid">
+    <div class="legend-item">
+      <div class="legend-dot" style="background: #6dafdb;"></div>
+      <span><strong>PD</strong> — 총감독, 전체 진행 관리</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background: #6ddb6d;"></div>
+      <span><strong>Sonnet</strong> — 빠른 분석 담당 AI</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background: #db6ddb;"></div>
+      <span><strong>Opus</strong> — 깊은 사고 담당 AI</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background: #dbdb6d;"></div>
+      <span><strong>Python</strong> — 자동화 프로그램</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ Pipeline Steps ════════════ -->
+<section class="pipeline">
+  <h2>단계별 상세 과정</h2>
+  <p>각 카드를 클릭하면 자세한 설명을 볼 수 있어요</p>
+
+  <!-- ──── Step 1: COLLECT ──── -->
+  <div class="step color-collect">
+    <div class="step-timeline">
+      <div class="step-number">1</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-content">
+      <div class="step-card" onclick="toggleDetail(this)">
+        <h3><span class="emoji">📥</span> 재료 수집</h3>
+        <div class="step-subtitle">COLLECT — 참고할 영상들의 정보를 긁어와요</div>
+        <div class="step-explain">
+          요리로 치면 <strong>장보기</strong> 단계예요.<br>
+          "이런 영상처럼 만들어줘" 하고 유튜브 링크를 주면,<br>
+          그 영상들의 <strong>제목, 자막, 썸네일, 댓글</strong>을 자동으로 가져와요.
+        </div>
+        <div class="agent-io">
+          <div class="agent-io-header">
+            <div class="agent-icon python-bg">🐍</div>
+            collect.py <span style="font-weight:400; color:#888;">(자동수집 프로그램)</span>
+          </div>
+          <div class="agent-io-body">
+            <div class="agent-io-in">
+              <div class="agent-io-label">받는 것 (입력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">유튜브 URL 1개~여러개</span>
+              </div>
+            </div>
+            <div class="agent-io-out">
+              <div class="agent-io-label">만드는 것 (출력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">meta.md</span>
+                <span class="agent-io-file">transcript.txt</span>
+                <span class="agent-io-file">thumbnail.webp</span>
+              </div>
+              <div class="agent-io-note">영상마다 폴더 1개 (001, 002…)</div>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint">클릭하면 자세히 →</div>
+        <div class="step-detail">
+          <div class="detail-inner">
+            <strong>수집하는 것들:</strong>
+            <ul>
+              <li><strong>meta.md</strong> — 제목, 조회수, 좋아요, 구독자 수, 상위 댓글 10개</li>
+              <li><strong>transcript.txt</strong> — 영상의 전체 자막 (나레이션 텍스트)</li>
+              <li><strong>thumbnail.webp</strong> — 썸네일 이미지</li>
+            </ul>
+            <br>
+            참고 영상이 3개면 001, 002, 003 폴더가 만들어지고<br>
+            각각 위 3개 파일이 들어가요.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──── Step 2: ANALYZE ──── -->
+  <div class="step color-analyze">
+    <div class="step-timeline">
+      <div class="step-number">2</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-content">
+      <div class="step-card" onclick="toggleDetail(this)">
+        <h3><span class="emoji">🔍</span> 영상 분석</h3>
+        <div class="step-subtitle">ANALYZE — 각 영상을 깊이 파헤쳐요</div>
+        <div class="step-explain">
+          수집한 영상들을 하나하나 <strong>왜 잘됐는지</strong> 분석해요.<br>
+          "이 영상은 제목이 이래서 클릭을 유도했고,<br>
+          처음 5초에 이렇게 시작해서 시청자를 잡았구나" 같은 거요.
+        </div>
+        <div class="agent-io">
+          <div class="agent-io-header">
+            <div class="agent-icon sonnet-bg">🔍</div>
+            영상분석가 (video-analyst) <span class="parallel-badge">⚡ 영상마다 1명, 동시 분석</span>
+          </div>
+          <div class="agent-io-body">
+            <div class="agent-io-in">
+              <div class="agent-io-label">받는 것 (입력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">meta.md</span>
+                <span class="agent-io-file">transcript.txt</span>
+                <span class="agent-io-file">thumbnail.webp</span>
+              </div>
+              <div class="agent-io-note">← 1단계에서 수집한 것</div>
+            </div>
+            <div class="agent-io-out">
+              <div class="agent-io-label">만드는 것 (출력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">analysis.md</span>
+              </div>
+              <div class="agent-io-note">영상마다 1개씩</div>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint">클릭하면 자세히 →</div>
+        <div class="step-detail">
+          <div class="detail-inner">
+            <strong>7가지를 분석해요:</strong>
+            <ul>
+              <li>① 이 영상이 뭘 다루는지 한줄 요약</li>
+              <li>② 썸네일 & 제목이 왜 클릭을 부르는지</li>
+              <li>③ 처음 몇 초(훅)가 어떻게 시선을 잡는지</li>
+              <li>④ 본문을 어떤 순서로 풀어가는지</li>
+              <li>⑤ 어떤 감정을 자극하는지 (놀라움? 분노? 궁금?)</li>
+              <li>⑥ 댓글 반응 — 시청자들이 어디에 열광하는지</li>
+              <li>⑦ 제목이 약속한 것 vs 실제 내용</li>
+            </ul>
+            <br>
+            영상 3개면 <strong>3명이 동시에</strong> 분석해서 시간을 아껴요.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──── Step 3: DATA PREP ──── -->
+  <div class="step color-data">
+    <div class="step-timeline">
+      <div class="step-number">3</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-content">
+      <div class="step-card" onclick="toggleDetail(this)">
+        <h3><span class="emoji">🧩</span> 패턴 추출 & 팩트체크</h3>
+        <div class="step-subtitle">DATA PREP — 공통점을 찾고, 숫자를 검증해요</div>
+        <div class="step-explain">
+          두 명이 <strong>동시에</strong> 일해요.<br>
+          한 명은 "잘되는 영상들의 공통 패턴"을 뽑고,<br>
+          다른 한 명은 영상에 나온 숫자·사실을 <strong>인터넷으로 검증</strong>해요.
+        </div>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px; margin-top:4px;">
+          <span class="parallel-badge" style="margin-left:0;">⚡ 이 두 명이 동시에 일해요</span>
+        </div>
+        <div class="agent-io">
+          <div class="agent-io-header">
+            <div class="agent-icon opus-bg">🧩</div>
+            패턴분석가 (pattern-extractor)
+          </div>
+          <div class="agent-io-body">
+            <div class="agent-io-in">
+              <div class="agent-io-label">받는 것 (입력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">analysis.md ×N개</span>
+                <span class="agent-io-file">meta.md ×N개</span>
+              </div>
+              <div class="agent-io-note">← 2단계의 분석 결과들</div>
+            </div>
+            <div class="agent-io-out">
+              <div class="agent-io-label">만드는 것 (출력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">patterns.md</span>
+              </div>
+              <div class="agent-io-note">잘되는 영상의 공통 공식</div>
+            </div>
+          </div>
+        </div>
+        <div class="agent-io" style="margin-top: 10px;">
+          <div class="agent-io-header">
+            <div class="agent-icon opus-bg">🔬</div>
+            데이터조사관 (data-researcher) <span style="font-weight:400; color:#888;">🌐 웹검색 가능</span>
+          </div>
+          <div class="agent-io-body">
+            <div class="agent-io-in">
+              <div class="agent-io-label">받는 것 (입력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">transcript.txt ×N개</span>
+                <span class="agent-io-file">analysis.md ×N개</span>
+              </div>
+              <div class="agent-io-note">← 영상 자막 + 분석 결과</div>
+            </div>
+            <div class="agent-io-out">
+              <div class="agent-io-label">만드는 것 (출력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">factcheck.md</span>
+                <span class="agent-io-file">verified-data.md</span>
+              </div>
+              <div class="agent-io-note">팩트체크 전체 기록 + 검증된 것만</div>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint">클릭하면 자세히 →</div>
+        <div class="step-detail">
+          <div class="detail-inner">
+            <strong>패턴분석가가 하는 일:</strong>
+            <ul>
+              <li>모든 분석을 비교해서 "잘되는 영상의 공통 공식" 추출</li>
+              <li>예: "잘되는 영상은 첫 문장에 결과를 먼저 보여줌"</li>
+              <li>썸네일/제목 패턴, 감정 흐름, 구조 패턴 등</li>
+            </ul>
+            <br>
+            <strong>데이터조사관이 하는 일:</strong>
+            <ul>
+              <li>영상에 나온 숫자/통계를 웹에서 직접 검색해서 확인</li>
+              <li>✅ 맞음 / ❌ 틀림 / ❓ 불확실 로 분류</li>
+              <li>검증된 데이터만 따로 모아서 대본에 쓸 수 있게 정리</li>
+              <li>+ 추가 리서치: 최신 뉴스, 놓친 각도 등도 조사</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──── Step 4: STRATEGY ──── -->
+  <div class="step color-strategy">
+    <div class="step-timeline">
+      <div class="step-number">4</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-content">
+      <div class="step-card" onclick="toggleDetail(this)">
+        <h3><span class="emoji">🎯</span> 크리에이티브 전략</h3>
+        <div class="step-subtitle">STRATEGY — 어떤 영상을 만들지 결정해요</div>
+        <div class="step-explain">
+          여기가 <strong>가장 중요한 단계</strong>예요.<br>
+          "어떤 각도로 이야기할지, 제목은 뭘로 할지,<br>
+          썸네일은 어떻게 만들지, 첫 5초는 뭘로 시작할지"<br>
+          — 영상의 전체 방향을 여기서 정해요.
+        </div>
+        <div class="agent-io">
+          <div class="agent-io-header">
+            <div class="agent-icon opus-bg">🎯</div>
+            전략가 (strategist)
+          </div>
+          <div class="agent-io-body">
+            <div class="agent-io-in">
+              <div class="agent-io-label">받는 것 (입력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">patterns.md</span>
+                <span class="agent-io-file">verified-data.md</span>
+                <span class="agent-io-file">채널 profile.md</span>
+              </div>
+              <div class="agent-io-note">← 3단계의 패턴 + 검증 데이터</div>
+            </div>
+            <div class="agent-io-out">
+              <div class="agent-io-label">만드는 것 (출력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">concept.md</span>
+                <span class="agent-io-file">hook-intro.md</span>
+                <span class="agent-io-file">prompts.json</span>
+              </div>
+              <div class="agent-io-note">컨셉 + 훅&인트로 + 썸네일 프롬프트</div>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint">클릭하면 자세히 →</div>
+        <div class="step-detail">
+          <div class="detail-inner">
+            <strong>전략가가 만드는 것:</strong>
+            <ul>
+              <li><strong>3개의 완전히 다른 컨셉</strong>을 먼저 만들어요</li>
+              <li>각 컨셉마다: 관점 + 핵심약속 + 제목 후보 + 썸네일 텍스트 + 첫 5초</li>
+              <li>셀프 평가 후 가장 좋은 1개를 선택 (또는 사용자가 고름)</li>
+              <li>확정된 전략으로 <strong>썸네일 이미지 프롬프트 5개</strong>도 생성</li>
+            </ul>
+            <br>
+            <strong>핵심 원칙:</strong><br>
+            제목(이성적 클릭 이유) + 썸네일 글자(감정 자극) + 썸네일 이미지(시선 끌기)<br>
+            이 세 가지가 서로 보완하되, 겹치지 않아야 해요.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──── Step 5: OUTLINE ──── -->
+  <div class="step color-outline">
+    <div class="step-timeline">
+      <div class="step-number">5</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-content">
+      <div class="step-card" onclick="toggleDetail(this)">
+        <h3><span class="emoji">📐</span> 대본 뼈대 잡기</h3>
+        <div class="step-subtitle">OUTLINE — 전체 구조와 분량을 설계해요</div>
+        <div class="step-explain">
+          집 짓기 전에 <strong>설계도</strong>를 그리는 단계예요.<br>
+          "파트1은 이런 내용으로 2분, 파트2는 저런 내용으로 3분…"<br>
+          이렇게 전체 뼈대를 잡아요.
+        </div>
+        <div class="agent-io">
+          <div class="agent-io-header">
+            <div class="agent-icon pd-bg">🎬</div>
+            PD (직접 설계)
+          </div>
+          <div class="agent-io-body">
+            <div class="agent-io-in">
+              <div class="agent-io-label">받는 것 (입력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">concept.md</span>
+                <span class="agent-io-file">hook-intro.md</span>
+                <span class="agent-io-file">patterns.md</span>
+                <span class="agent-io-file">verified-data.md</span>
+              </div>
+              <div class="agent-io-note">← 3~4단계의 패턴 + 전략 + 검증 데이터</div>
+            </div>
+            <div class="agent-io-out">
+              <div class="agent-io-label">만드는 것 (출력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">outline.md</span>
+              </div>
+              <div class="agent-io-note">파트별 분량 + 내용 설계도</div>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint">클릭하면 자세히 →</div>
+        <div class="step-detail">
+          <div class="detail-inner">
+            <strong>outline.md에 들어가는 것:</strong>
+            <ul>
+              <li>전체 영상 길이 & 파트별 목표 분량 (글자 수)</li>
+              <li>파트별 핵심 내용 & 전달할 감정</li>
+              <li>어디서 시청자를 잡아둘지 (이탈 방지 장치)</li>
+              <li>용어 매핑 (어려운 말 → 쉬운 말)</li>
+              <li>9가지 자체 점검 항목 체크</li>
+            </ul>
+            <br>
+            <strong>중요:</strong> 제목이 "3가지 이유"라고 했으면<br>
+            반드시 3개 파트가 있어야 해요. 제목이 구조를 결정해요.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──── Step 6: DRAFT ──── -->
+  <div class="step color-draft">
+    <div class="step-timeline">
+      <div class="step-number">6</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-content">
+      <div class="step-card" onclick="toggleDetail(this)">
+        <h3><span class="emoji">✍️</span> 대본 집필</h3>
+        <div class="step-subtitle">DRAFT — 실제 나레이션을 써요</div>
+        <div class="step-explain">
+          드디어 <strong>실제 대본</strong>을 쓰는 단계!<br>
+          파트가 3개면 <strong>작가 3명이 동시에</strong> 각자 파트를 써요.<br>
+          다 쓰면 하나로 합치고, 분량이 맞는지 검사해요.
+        </div>
+        <div class="agent-io">
+          <div class="agent-io-header">
+            <div class="agent-icon opus-bg">✍️</div>
+            작가 (script-writer) <span class="parallel-badge">⚡ 파트마다 1명, 동시 집필</span>
+          </div>
+          <div class="agent-io-body">
+            <div class="agent-io-in">
+              <div class="agent-io-label">받는 것 (입력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">outline.md (자기 파트)</span>
+                <span class="agent-io-file">concept.md</span>
+                <span class="agent-io-file">verified-data.md</span>
+              </div>
+              <div class="agent-io-note">← 5단계 뼈대 + 전략 + 데이터</div>
+            </div>
+            <div class="agent-io-out">
+              <div class="agent-io-label">만드는 것 (출력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">_draft_part1.md</span>
+                <span class="agent-io-file">_draft_part2.md …</span>
+              </div>
+              <div class="agent-io-note">파트별 나레이션 원고</div>
+            </div>
+          </div>
+        </div>
+        <div class="agent-io" style="margin-top: 10px;">
+          <div class="agent-io-header">
+            <div class="agent-icon python-bg">🐍</div>
+            merge_draft.py + validate_draft.py <span style="font-weight:400; color:#888;">(합치기 & 검사)</span>
+          </div>
+          <div class="agent-io-body">
+            <div class="agent-io-in">
+              <div class="agent-io-label">받는 것 (입력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">hook-intro.md</span>
+                <span class="agent-io-file">_draft_part*.md</span>
+              </div>
+              <div class="agent-io-note">← 훅&인트로 + 파트별 원고</div>
+            </div>
+            <div class="agent-io-out">
+              <div class="agent-io-label">만드는 것 (출력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">draft.md (합본)</span>
+              </div>
+              <div class="agent-io-note">분량 90% 미만 → 재작성 1회</div>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint">클릭하면 자세히 →</div>
+        <div class="step-detail">
+          <div class="detail-inner">
+            <strong>작가의 규칙:</strong>
+            <ul>
+              <li>outline.md에서 정한 분량 꼭 맞추기</li>
+              <li>검증된 데이터(verified-data.md)만 사용</li>
+              <li>쉬운 말로 쓰기, 한 문장에 숫자 3개 이하</li>
+              <li>채널 톤에 맞추기</li>
+            </ul>
+            <br>
+            <strong>분량 검사:</strong><br>
+            목표 대비 90% 미만이면 ❌ 불합격 → 다시 쓰기 (1회만)
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──── Step 7: REVIEW ──── -->
+  <div class="step color-review">
+    <div class="step-timeline">
+      <div class="step-number">7</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-content">
+      <div class="step-card" onclick="toggleDetail(this)">
+        <h3><span class="emoji">✅</span> 품질 검수</h3>
+        <div class="step-subtitle">REVIEW — 대본의 완성도를 검증해요</div>
+        <div class="step-explain">
+          출판 전 <strong>편집자가 원고를 검토</strong>하는 것처럼,<br>
+          약속한 내용이 다 들어갔는지, 틀린 정보는 없는지,<br>
+          새로 추가된 내용은 사실인지까지 꼼꼼히 확인해요.
+        </div>
+        <div class="agent-io">
+          <div class="agent-io-header">
+            <div class="agent-icon opus-bg">✅</div>
+            검수관 (script-reviewer) <span style="font-weight:400; color:#888;">🌐 웹검색 가능</span>
+          </div>
+          <div class="agent-io-body">
+            <div class="agent-io-in">
+              <div class="agent-io-label">받는 것 (입력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">draft.md</span>
+                <span class="agent-io-file">outline.md</span>
+                <span class="agent-io-file">concept.md</span>
+                <span class="agent-io-file">verified-data.md</span>
+              </div>
+              <div class="agent-io-note">← 대본 + 기준이 되는 문서들</div>
+            </div>
+            <div class="agent-io-out">
+              <div class="agent-io-label">만드는 것 (출력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">review.md</span>
+              </div>
+              <div class="agent-io-note">통과 or 수정 판정</div>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint">클릭하면 자세히 →</div>
+        <div class="step-detail">
+          <div class="detail-inner">
+            <strong>5가지 체크리스트:</strong>
+            <ul>
+              <li>① 핵심 약속 — 제목에서 약속한 걸 대본이 지키는지</li>
+              <li>② 구조 — 뼈대(outline) 대로 쓰였는지</li>
+              <li>③ 문체 — 쉬운 말, 적절한 숫자 사용</li>
+              <li>④ 톤 — 채널 분위기에 맞는지</li>
+              <li>⑤ 새 주장 — 작가가 새로 넣은 내용을 웹 검색으로 검증</li>
+            </ul>
+            <br>
+            <strong>판정:</strong><br>
+            🟢 <strong>통과</strong> → 최종 단계로!<br>
+            🔴 <strong>수정</strong> → 작가에게 돌려보내기 (1회만)
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──── Step 8: DONE ──── -->
+  <div class="step color-done">
+    <div class="step-timeline">
+      <div class="step-number">🎉</div>
+      <div class="step-line" style="min-height: 0; flex: 0;"></div>
+    </div>
+    <div class="step-content">
+      <div class="step-card" onclick="toggleDetail(this)">
+        <h3><span class="emoji">🏁</span> 완성!</h3>
+        <div class="step-subtitle">DONE — 대본이 완성됐어요</div>
+        <div class="step-explain">
+          마크다운 서식을 벗겨내고 <strong>순수 나레이션 텍스트</strong>만 뽑아요.<br>
+          이 파일을 영상 제작 사이트에 올리면<br>
+          TTS(음성합성) → 영상 제작이 자동으로 진행돼요.
+        </div>
+        <div class="agent-io">
+          <div class="agent-io-header">
+            <div class="agent-icon python-bg">🐍</div>
+            finalize.py <span style="font-weight:400; color:#888;">(최종 변환 프로그램)</span>
+          </div>
+          <div class="agent-io-body">
+            <div class="agent-io-in">
+              <div class="agent-io-label">받는 것 (입력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">draft.md</span>
+              </div>
+              <div class="agent-io-note">← 검수 통과한 대본</div>
+            </div>
+            <div class="agent-io-out">
+              <div class="agent-io-label">만드는 것 (출력)</div>
+              <div class="agent-io-files">
+                <span class="agent-io-file">script.txt</span>
+              </div>
+              <div class="agent-io-note">TTS용 순수 나레이션 텍스트</div>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint">클릭하면 자세히 →</div>
+        <div class="step-detail">
+          <div class="detail-inner">
+            <strong>최종 산출물:</strong>
+            <ul>
+              <li><strong>script.txt</strong> — 순수 나레이션 텍스트 (TTS용)</li>
+            </ul>
+            <br>
+            <strong>이전 단계에서 이미 생성된 부가 산출물:</strong>
+            <ul>
+              <li><strong>youtube.md</strong> — 업로드용 제목, 설명, 태그</li>
+              <li><strong>prompts.json</strong> — 썸네일 이미지 생성용 프롬프트 5개 (4단계 전략에서 생성)</li>
+            </ul>
+            <br>
+            글자 수와 예상 재생시간(400자/분 기준)도 알려줘요.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ════════════ Footer ════════════ -->
+<footer class="footer">
+  autoworkers — AI가 만드는 유튜브 대본 파이프라인
+</footer>
+
+<script>
+function toggleDetail(card) {
+  const detail = card.querySelector('.step-detail');
+  if (detail) {
+    detail.classList.toggle('open');
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+channels/*/projects/
+channels/*/projects/_archive/
+.DS_Store
