@@ -65,7 +65,8 @@ PD가 Task tool로 호출 시 전달:
 - **판단 근거 추적 가능**: 판단 근거에 어떤 데이터를 참고했는지 구체적으로 명시한다. "댓글 통쾌함 반응 40%", "001 조회수 188,453회" 등 출처와 수치를 포함.
 - **클릭베이트 금지**: 영상 내용과 무관한 과장 금지.
 - **썸네일 전략 우선**: `config/thumbnail-strategy.json`이 있으면 `thumbnail-design.md` 기본값 대신 채널별 설정(장수, 스타일, 색감, 감정, 구도, 인물, 브랜드)을 따른다. 없으면 기본값 사용.
-- **boilerplate 불포함**: prompt_en에 비율/구도 여백/텍스트 금지 문구를 넣지 않는다 (generate_thumbnails.py가 text_space 설정에 따라 자동 추가).
+- **[CANVAS] 선언 필수 (모든 채널 공통)**: `concept_ko`는 `[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격.`로 시작, `prompt_en`은 `[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format.`로 시작 (자세한 규칙은 thumbnail-design.md 0번).
+- **그 외 boilerplate 불포함**: 구도 여백·텍스트 금지 문구는 prompt_en에 넣지 않는다 (generate_thumbnails.py가 text_space 설정에 따라 자동 추가).
 
 ## 실행 방식
 

@@ -20,20 +20,20 @@
     {
       "id": 1,
       "type": "concept-a-photorealistic",
-      "concept_ko": "컨셉 A 실사. 상단 2/3에 짙은 남색 배경, 거대한 녹색 상승 화살표가 화면을 관통하며, 정장 차림의 월가 트레이더가 결의에 찬 표정으로 정면을 응시. 하단 1/3은 어두운 배경만(텍스트 영역).",
-      "prompt_en": "Photorealistic cinematic photograph of a Wall Street trader in a dark suit standing confidently with a resolute expression, looking directly at the camera. Behind him, a massive glowing green upward arrow cuts through the dark navy-black background, with subtle red stock chart lines and financial data screens visible in the shadows. Dark cinematic atmosphere with dramatic side lighting highlighting the trader's determined face. Deep shadows and moody tension contrast with the bright green arrow suggesting powerful momentum."
+      "concept_ko": "[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격. 컨셉 A 실사. 상단 2/3에 짙은 남색 배경, 거대한 녹색 상승 화살표가 화면을 관통하며, 정장 차림의 월가 트레이더가 결의에 찬 표정으로 정면을 응시. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format. Photorealistic cinematic photograph of a Wall Street trader in a dark suit standing confidently with a resolute expression, looking directly at the camera. Behind him, a massive glowing green upward arrow cuts through the dark navy-black background, with subtle red stock chart lines and financial data screens visible in the shadows. Dark cinematic atmosphere with dramatic side lighting highlighting the trader's determined face. Deep shadows and moody tension contrast with the bright green arrow suggesting powerful momentum."
     },
     {
       "id": 2,
       "type": "concept-b-anime",
-      "concept_ko": "컨셉 B 애니메. 상단 2/3에 좌우 분할 — 좌측 어두운 적색 배경에 폭발/연기(전쟁), 우측 짙은 녹색/금색 배경에 달러 다발과 상승 차트. 중앙에서 두 세계가 충돌. 하단 1/3은 어두운 배경만(텍스트 영역).",
-      "prompt_en": "Vibrant anime-style illustration with dramatic split composition. Left side shows dark red-orange explosions, smoke clouds, and missile silhouettes representing war and conflict. Right side shows stacks of US dollar bills glowing in golden light with a bright green stock chart arrow surging upward. The two worlds collide at the center with an energy shockwave effect. Bold ink outlines, cel-shaded dramatic lighting, intense color contrast between the fiery red war side and the prosperous green-gold money side."
+      "concept_ko": "[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격. 컨셉 B 애니메. 상단 2/3에 좌우 분할 — 좌측 어두운 적색 배경에 폭발/연기(전쟁), 우측 짙은 녹색/금색 배경에 달러 다발과 상승 차트. 중앙에서 두 세계가 충돌. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format. Vibrant anime-style illustration with dramatic split composition. Left side shows dark red-orange explosions, smoke clouds, and missile silhouettes representing war and conflict. Right side shows stacks of US dollar bills glowing in golden light with a bright green stock chart arrow surging upward. The two worlds collide at the center with an energy shockwave effect. Bold ink outlines, cel-shaded dramatic lighting, intense color contrast between the fiery red war side and the prosperous green-gold money side."
     },
     {
       "id": 3,
       "type": "wildcard-hybrid",
-      "concept_ko": "와일드카드. 상단 2/3에 블랙록·JP모건·모건스탠리 로고 3개가 삼각형으로 배치되고, 각 로고에서 녹색 자금 흐름 선이 중앙의 거대한 'BUY' 버튼으로 수렴. 하단 1/3은 어두운 배경만(텍스트 영역).",
-      "prompt_en": "Hybrid 3D-rendered and photorealistic composition showing the logos of BlackRock, JP Morgan, and Morgan Stanley arranged in a triangle formation. From each logo, luminous green money-flow streams converge toward a massive glowing green BUY button at the center, pulsing with energy. Dark cinematic black background with dramatic volumetric lighting, neon-edge glow effects on the logos, and dynamic motion blur on the converging streams creating a sense of coordinated momentum and institutional conviction."
+      "concept_ko": "[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격. 와일드카드. 상단 2/3에 블랙록·JP모건·모건스탠리 로고 3개가 삼각형으로 배치되고, 각 로고에서 녹색 자금 흐름 선이 중앙의 거대한 'BUY' 버튼으로 수렴. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format. Hybrid 3D-rendered and photorealistic composition showing the logos of BlackRock, JP Morgan, and Morgan Stanley arranged in a triangle formation. From each logo, luminous green money-flow streams converge toward a massive glowing green BUY button at the center, pulsing with energy. Dark cinematic black background with dramatic volumetric lighting, neon-edge glow effects on the logos, and dynamic motion blur on the converging streams creating a sense of coordinated momentum and institutional conviction."
     }
   ]
 }

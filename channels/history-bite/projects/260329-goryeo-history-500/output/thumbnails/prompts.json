@@ -20,20 +20,20 @@
     {
       "id": 1,
       "type": "concept-a-photorealistic",
-      "concept_ko": "컨셉 A 실사. 상단 2/3에 고려 궁궐(만월대) 웅장한 모습. 궁궐 앞에 작은 백성 실루엣들. 하단 1/3은 어두운 먹색 배경만.",
-      "prompt_en": "Photorealistic cinematic photograph of a grand Goryeo dynasty palace (Manwoldae) in the upper two-thirds of the frame. The palace is majestic with traditional Korean architecture, curved roofs with dark tiles, set against a moody twilight sky with warm orange-amber light breaking through clouds. Small silhouettes of common people walk in the courtyard below the palace, emphasizing the massive scale. Desaturated monochrome palette with selective warm amber and orange accent lighting on the palace edges. The bottom third is plain dark ink-black background with no objects. Atmospheric fog adds depth and mystery."
+      "concept_ko": "[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격. 컨셉 A 실사. 상단 2/3에 고려 궁궐(만월대) 웅장한 모습. 궁궐 앞에 작은 백성 실루엣들. 하단 1/3은 어두운 먹색 배경만.",
+      "prompt_en": "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format. Photorealistic cinematic photograph of a grand Goryeo dynasty palace (Manwoldae) in the upper two-thirds of the frame. The palace is majestic with traditional Korean architecture, curved roofs with dark tiles, set against a moody twilight sky with warm orange-amber light breaking through clouds. Small silhouettes of common people walk in the courtyard below the palace, emphasizing the massive scale. Desaturated monochrome palette with selective warm amber and orange accent lighting on the palace edges. The bottom third is plain dark ink-black background with no objects. Atmospheric fog adds depth and mystery."
     },
     {
       "id": 2,
       "type": "concept-b-anime",
-      "concept_ko": "컨셉 B 애니메. 상단 2/3에 좌우 분할 — 좌: 벽란도 무역항의 활기찬 금빛 장면, 우: 불타는 개경의 차가운 회청색. 하단 1/3은 비움.",
-      "prompt_en": "Vibrant anime-style illustration with dramatic split composition in the upper two-thirds. Left half: a bustling Goryeo-era international trading port (Byeongnando) bathed in warm golden light, with merchant ships from Arabia and Song China, colorful market stalls, and lively crowds in traditional Korean hanbok. Right half: the same city of Gaegyeong burning under Mongol invasion, cold blue-grey tones with orange flames consuming traditional Korean buildings, Mongol cavalry silhouettes. Sharp vertical dividing line between prosperity and destruction. The bottom third is minimal dark background. Bold ink outlines, cel-shaded dramatic lighting."
+      "concept_ko": "[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격. 컨셉 B 애니메. 상단 2/3에 좌우 분할 — 좌: 벽란도 무역항의 활기찬 금빛 장면, 우: 불타는 개경의 차가운 회청색. 하단 1/3은 비움.",
+      "prompt_en": "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format. Vibrant anime-style illustration with dramatic split composition in the upper two-thirds. Left half: a bustling Goryeo-era international trading port (Byeongnando) bathed in warm golden light, with merchant ships from Arabia and Song China, colorful market stalls, and lively crowds in traditional Korean hanbok. Right half: the same city of Gaegyeong burning under Mongol invasion, cold blue-grey tones with orange flames consuming traditional Korean buildings, Mongol cavalry silhouettes. Sharp vertical dividing line between prosperity and destruction. The bottom third is minimal dark background. Bold ink outlines, cel-shaded dramatic lighting."
     },
     {
       "id": 3,
       "type": "wildcard",
-      "concept_ko": "와일드카드. 상단 2/3에 고려 왕의 금관과 용포 클로즈업. 왕관에 균열이 가면서 한쪽은 빛나고 한쪽은 부서지는 모습. 흥망성쇠를 상징.",
-      "prompt_en": "Dark cinematic photograph of an ornate Goryeo dynasty golden royal crown and dragon robe in dramatic close-up, positioned in the upper two-thirds of the frame. The crown is cracking down the middle — the left side gleams with pristine gold and embedded jade, radiating warm amber light. The right side is fractured and tarnished, pieces breaking away into darkness, representing decline. Desaturated monochrome background with selective gold and deep red accent colors. Dramatic rim lighting emphasizes the crack. The bottom third is plain deep black background with no objects. Atmosphere of grandeur meeting inevitable decay."
+      "concept_ko": "[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격. 와일드카드. 상단 2/3에 고려 왕의 금관과 용포 클로즈업. 왕관에 균열이 가면서 한쪽은 빛나고 한쪽은 부서지는 모습. 흥망성쇠를 상징.",
+      "prompt_en": "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format. Dark cinematic photograph of an ornate Goryeo dynasty golden royal crown and dragon robe in dramatic close-up, positioned in the upper two-thirds of the frame. The crown is cracking down the middle — the left side gleams with pristine gold and embedded jade, radiating warm amber light. The right side is fractured and tarnished, pieces breaking away into darkness, representing decline. Desaturated monochrome background with selective gold and deep red accent colors. Dramatic rim lighting emphasizes the crack. The bottom third is plain deep black background with no objects. Atmosphere of grandeur meeting inevitable decay."
     }
   ]
 }

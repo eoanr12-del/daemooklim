@@ -40,6 +40,7 @@ creative-strategy.md Phase 5에서 참조하는 **프롬프트 작성 규칙**.
 
 ### 프롬프트 작성 규칙
 
+0. **[캔버스] 선언 필수 (모든 채널 공통)**: `concept_ko`는 **반드시 다음 문구로 시작**한다 — `[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격.` 이어서 캔버스 채움 규칙(예: "캔버스 전체가 한 장의 자연스러운 그림으로 끊김 없이 채워져야 함")을 잇는다. `prompt_en`도 동일하게 **`[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format.`** 로 시작한다. 이 캔버스 선언은 `text_space` 값과 무관하게 모든 채널·모든 컨셉에 공통으로 들어간다.
 1. **영어로 작성**: AI 이미지 생성 모델에 최적화
 2. **실존 인물 실명 포함**: 전략에 실존 인물이 포함된 경우, 프롬프트에 반드시 실명과 직함을 영문으로 표기한다. 예: `"Lee Jae-yong (Samsung Electronics chairman)"`, `"Jensen Huang (NVIDIA CEO)"`. 일반화("an Asian man in a suit")는 금지.
 3. **비실존 인물 외모**: 특정 실존 인물이 아닌 일반 캐릭터/인물이 등장할 경우, `"attractive, appealing appearance, likeable face"` 등을 추가하여 호감형 외모로 생성한다. 실사 스타일이면 `"attractive young woman/man with a warm likeable face"`, 애니메 스타일이면 `"beautiful/handsome anime character with expressive eyes"` 형태로.
@@ -92,10 +93,11 @@ creative-strategy.md Phase 5에서 참조하는 **프롬프트 작성 규칙**.
 | `full` | 전체 프레임을 이미지로 채움. 텍스트 공간 확보 불필요. 피사체를 프레임 전체에 배치. |
 | `left-right` | 핵심 피사체를 한쪽(좌 또는 우)에 배치. 반대쪽은 단순 배경으로 텍스트 공간 확보. |
 
-> **boilerplate 불포함**: 아래는 `generate_thumbnails.py`가 `text_space` 설정에 따라 자동 추가하므로 prompt_en에 포함하지 않는다:
-> 1. 16:9 비율 (`wide 16:9 aspect ratio, YouTube thumbnail composition`)
-> 2. 구도 규칙 (`text_space`에 해당하는 composition 지시문)
-> 3. 텍스트 금지 (`STRICTLY NO TEXT: ... no placeholder text, no subtitles, no watermark`)
+> **boilerplate 처리**:
+> - **[CANVAS] 캔버스 선언**(`[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format`)은 **규칙 0번에 따라 prompt_en/concept_ko 맨 앞에 직접 작성한다.** `generate_thumbnails.py`도 같은 문구를 안전망으로 추가하지만, 중복은 자동으로 제거되므로 항상 작성할 것.
+> - 아래는 `generate_thumbnails.py`가 `text_space` 설정에 따라 자동 추가하므로 prompt_en에 포함하지 않는다:
+>   1. 구도 규칙 (`text_space`에 해당하는 composition 지시문)
+>   2. 텍스트 금지 (`STRICTLY NO TEXT: ... no placeholder text, no subtitles, no watermark`)
 
 ### 인물 표현 (`face_style`)
 
@@ -134,14 +136,14 @@ creative-strategy.md Phase 5에서 참조하는 **프롬프트 작성 규칙**.
     {
       "id": 1,
       "type": "concept-a-realistic",
-      "concept_ko": "컨셉 A 실사. 배민 라이더가 무너지는 도시 앞에 서있는 시네마틱 장면.",
-      "prompt_en": "Cinematic dramatic photograph of a Baemin delivery rider standing in front of a crumbling dark cityscape. The rider's mint-green uniform contrasts sharply against the shadowy backdrop with visible cracks spreading across buildings. Dramatic side lighting casts long shadows, creating a moody atmosphere of decline and crisis."
+      "concept_ko": "[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격. 컨셉 A 실사. 배민 라이더가 무너지는 도시 앞에 서있는 시네마틱 장면.",
+      "prompt_en": "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format. Cinematic dramatic photograph of a Baemin delivery rider standing in front of a crumbling dark cityscape. The rider's mint-green uniform contrasts sharply against the shadowy backdrop with visible cracks spreading across buildings. Dramatic side lighting casts long shadows, creating a moody atmosphere of decline and crisis."
     },
     {
       "id": 2,
       "type": "concept-a-anime",
-      "concept_ko": "컨셉 A 애니메. 같은 라이더+도시 붕괴를 애니메 스타일로 표현.",
-      "prompt_en": "Vibrant anime-style illustration of a Baemin delivery rider standing before a dramatically crumbling cityscape. Bold ink outlines and cel-shaded lighting emphasize the contrast between the rider's mint-green uniform and the dark, fractured buildings behind. Intense dramatic atmosphere with exaggerated perspective and vivid color contrast."
+      "concept_ko": "[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격. 컨셉 A 애니메. 같은 라이더+도시 붕괴를 애니메 스타일로 표현.",
+      "prompt_en": "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format. Vibrant anime-style illustration of a Baemin delivery rider standing before a dramatically crumbling cityscape. Bold ink outlines and cel-shaded lighting emphasize the contrast between the rider's mint-green uniform and the dark, fractured buildings behind. Intense dramatic atmosphere with exaggerated perspective and vivid color contrast."
     }
   ]
 }

@@ -37,7 +37,8 @@ def load_thumbnail_strategy(channel: str | None) -> dict | None:
 def get_prompt_suffixes(strategy: dict | None) -> list[str]:
     """Build boilerplate suffixes based on channel's thumbnail strategy."""
     suffixes = [
-        "wide 16:9 aspect ratio, YouTube thumbnail composition",
+        "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, "
+        "horizontal YouTube thumbnail format",
     ]
 
     # Text space / composition rule
