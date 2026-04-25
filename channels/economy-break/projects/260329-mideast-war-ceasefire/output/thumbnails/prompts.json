@@ -20,20 +20,20 @@
     {
       "id": 1,
       "type": "concept-a-photorealistic",
-      "concept_ko": "[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격. 컨셉 A 실사. 상단 2/3에 좌측 1973년 흑백 유전 화재, 우측 2026년 호르무즈 군함과 화염. 하단 1/3은 어두운 배경만.",
-      "prompt_en": "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format. Dark cinematic split-screen photograph, wide 16:9 aspect ratio. All key visual elements concentrated in the upper two-thirds of the frame. Left half in desaturated sepia tone: a massive 1973 oil well fire with towering black smoke plumes against a desert sky. Right half in vivid dramatic color: modern warships patrolling the narrow Strait of Hormuz with orange-red flames reflecting on dark water. A sharp vertical dividing line separates the two eras. The bottom third of the image is empty dark background with subtle smoke haze, no important objects or details. Deep shadows with dramatic contrast, ominous atmosphere of history repeating itself."
+      "concept_ko": "[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격. 컨셉 A 실사.",
+      "prompt_en": "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format. Dark cinematic split-screen photograph, wide 16:9 aspect ratio. Left half in desaturated sepia tone: a massive 1973 oil well fire with towering black smoke plumes against a desert sky. Right half in vivid dramatic color: modern warships patrolling the narrow Strait of Hormuz with orange-red flames reflecting on dark water. A sharp vertical dividing line separates the two eras. The bottom third of the image is empty dark background with subtle smoke haze, no important objects or details. Deep shadows with dramatic contrast, ominous atmosphere of history repeating itself."
     },
     {
       "id": 2,
       "type": "concept-a-anime",
-      "concept_ko": "[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격. 컨셉 A 애니메. 상단 2/3에 역사 재현 분할 (좌 세피아 1973 유전 화재, 우 붉은 현대 해협 위기). 하단 1/3은 비움.",
-      "prompt_en": "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format. Vibrant anime-style illustration, wide 16:9 aspect ratio. All key visual elements concentrated in the upper two-thirds of the frame. Left half in muted sepia-toned retro anime style: blazing oil derricks with stylized black smoke swirls, 1973 atmosphere. Right half in bold saturated modern anime colors: sleek warships in a narrow strait with exaggerated orange-red explosions and dramatic wave effects. The bottom third is minimal dark background with faint color wash only, no characters or objects. Intense cel-shaded lighting with sharp contrast between the faded past and vivid present crisis. Bold ink outlines, dynamic perspective."
+      "concept_ko": "[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격. 컨셉 A 애니메.",
+      "prompt_en": "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format. Vibrant anime-style illustration, wide 16:9 aspect ratio. Left half in muted sepia-toned retro anime style: blazing oil derricks with stylized black smoke swirls, 1973 atmosphere. Right half in bold saturated modern anime colors: sleek warships in a narrow strait with exaggerated orange-red explosions and dramatic wave effects. The bottom third is minimal dark background with faint color wash only, no characters or objects. Intense cel-shaded lighting with sharp contrast between the faded past and vivid present crisis. Bold ink outlines, dynamic perspective."
     },
     {
       "id": 3,
       "type": "wildcard",
-      "concept_ko": "[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격. 와일드카드. 상단 2/3에 거대한 석유 배럴이 균열과 함께 붕괴. 배럴 표면에 세계 지도, 중동이 빨갛게 빛남. 하단 1/3은 어두운 배경만.",
-      "prompt_en": "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format. Dark cinematic photograph, wide 16:9 aspect ratio. A massive oversized oil barrel cracking and fracturing dramatically, positioned in the upper two-thirds of the frame. A world map is projected onto the barrel's surface, with the Middle East region glowing bright red through deep cracks. Shards of metal peel away revealing intense orange-red light beneath. The bottom third of the image is plain deep black background with no objects or details, left completely empty. Dramatic rim lighting on the barrel edges, ominous atmosphere of global economic crisis."
+      "concept_ko": "[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격. 와일드카드. 배럴 표면에 세계 지도, 중동이 빨갛게 빛남.",
+      "prompt_en": "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format. Dark cinematic photograph, wide 16:9 aspect ratio. A world map is projected onto the barrel's surface, with the Middle East region glowing bright red through deep cracks. Shards of metal peel away revealing intense orange-red light beneath. The bottom third of the image is plain deep black background with no objects or details, left completely empty. Dramatic rim lighting on the barrel edges, ominous atmosphere of global economic crisis."
     }
   ]
 }

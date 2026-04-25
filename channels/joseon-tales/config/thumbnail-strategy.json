@@ -3,7 +3,7 @@
   "art_styles": ["photorealistic", "anime", "wildcard", "2d-illustration"],
   "color_palette": "monotone",
   "emotions": ["curiosity", "tension"],
-  "text_space": "bottom-third",
+  "text_space": "full",
   "face_style": "auto",
   "brand": {
     "colors": [],

@@ -302,9 +302,8 @@ Q10. 썸네일에서 유발하고 싶은 감정은? (1~2개 선택)
 
 ```
 Q11. 텍스트 공간을 따로 확보할까요?
-  A. 네 — 하단 1/2을 비워두세요 ← 추천 (미리캔버스에서 텍스트 추가 시 편리)
-  B. 아니오 — 전체 이미지, 텍스트는 이미지 위에 직접 얹을게요
-  C. 좌우 분리 — 한쪽 이미지 / 반대쪽 텍스트 공간
+  A. 아니오 — 전체 이미지, 텍스트는 이미지 위에 자유롭게 얹을게요 ← 추천 (2026-04-26 정책: 상하 zoning 폐지)
+  B. 좌우 분리 — 한쪽 이미지 / 반대쪽 단순 배경 (좌우 zoning만 유지됨)
 
 Q12. 인물(사람 얼굴) 표현은?
   A. 과장된 표정 클로즈업 — 놀란 얼굴, 충격 표정 (유튜브 클래식)
@@ -422,7 +421,7 @@ Q15. 참고하고 싶은 유튜브 썸네일이 있나요? (선택사항)
   "art_styles": ["photorealistic", "anime"],
   "color_palette": "bright",
   "emotions": ["shock", "curiosity"],
-  "text_space": "bottom-half",
+  "text_space": "full",
   "face_style": "exaggerated",
   "brand": {
     "colors": [],
@@ -439,7 +438,7 @@ Q15. 참고하고 싶은 유튜브 썸네일이 있나요? (선택사항)
 | art_styles | Q8 | A→"photorealistic", B→"anime", C→커스텀 문자열 |
 | color_palette | Q9 | A→"bright", B→"dark", C→"pastel", D→"neon", E→"monotone", F→"auto" |
 | emotions | Q10 | A→"shock", B→"curiosity", C→"tension", D→"trust", E→"warmth", F→"humor", G→"premium" |
-| text_space | Q11 | A→"bottom-half", B→"full", C→"left-right" |
+| text_space | Q11 | A→"full" (default), B→"left-right" |
 | face_style | Q12 | A→"exaggerated", B→"natural", C→"silhouette", D→"minimize", E→"auto" |
 | brand.colors | Q13-A | 사용자 입력 색상 배열 |
 | brand.mascot | Q13-B | true/false |

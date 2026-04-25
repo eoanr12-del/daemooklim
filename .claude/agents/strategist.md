@@ -66,7 +66,8 @@ PD가 Task tool로 호출 시 전달:
 - **클릭베이트 금지**: 영상 내용과 무관한 과장 금지.
 - **썸네일 전략 우선**: `config/thumbnail-strategy.json`이 있으면 `thumbnail-design.md` 기본값 대신 채널별 설정(장수, 스타일, 색감, 감정, 구도, 인물, 브랜드)을 따른다. 없으면 기본값 사용.
 - **[CANVAS] 선언 필수 (모든 채널 공통)**: `concept_ko`는 `[캔버스] 16:9 비율, 1280x720 픽셀 정확히. 가로형 유튜브 썸네일 규격.`로 시작, `prompt_en`은 `[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format.`로 시작 (자세한 규칙은 thumbnail-design.md 0번).
-- **그 외 boilerplate 불포함**: 구도 여백·텍스트 금지 문구는 prompt_en에 넣지 않는다 (generate_thumbnails.py가 text_space 설정에 따라 자동 추가).
+- **상단/하단 zoning 금지 (2026-04-26 정책)**: `[구도]/[COMPOSITION]/[LAYOUT]` 블록을 만들지 말 것. "상단 2/3", "하단 1/3", "upper two-thirds", "bottom one-third", "subtitle zone", "reserved for text" 등 상하 zoning 표현 사용 금지. 자유 구도 + 자막은 후편집에서 자유 배치.
+- **그 외 boilerplate 불포함**: 텍스트 금지 문구(`STRICTLY NO TEXT`)는 generate_thumbnails.py가 자동 추가하므로 prompt_en에 넣지 않는다.
 
 ## 실행 방식
 

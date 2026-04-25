@@ -3,7 +3,7 @@
   "art_styles": ["photorealistic", "anime", "hybrid", "cozy-storybook", "2d-illustration"],
   "color_palette": "pastel",
   "emotions": ["curiosity", "warmth"],
-  "text_space": "bottom-third",
+  "text_space": "full",
   "face_style": "auto",
   "brand": {
     "colors": [],
@@ -15,7 +15,7 @@
     "style_fixed": "Cozy storybook illustration style, soft watercolor and pastel textures, warm muted color palette (beige, dusty blue, sage green, warm brown, cream). Simple round-headed character with minimal facial features (small dot eyes, subtle gentle expressions). Hand-drawn ink outlines with soft shading. Ghibli-inspired atmosphere with cinematic lighting and lived-in environmental details. Consistent character design across all scenes.",
     "scene_customize": "character pose/expression/action + 1-3 emotional or conceptual elements (floating objects, symbolic items, silhouettes) + optional symbolic glow (amber=kindness, cyan=calm, rose=vulnerability, gold=hope)",
     "background_customize": "any setting required by storyboard + lighting direction and time of day + 2-3 contextual props + mood",
-    "composition_thumbnail": "character slightly left of center, negative space on right for Korean title text (within upper two-thirds; bottom one-third remains dark empty for post-production text)",
+    "composition_thumbnail": "character slightly left of center, negative space on right side for visual breathing room — full canvas free composition, no upper/lower zoning",
     "restriction_fixed": "No text, no letters, no numbers, no watermarks, no logos, no signage."
   }
 }

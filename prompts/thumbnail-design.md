@@ -86,18 +86,20 @@ creative-strategy.md Phase 5에서 참조하는 **프롬프트 작성 규칙**.
 
 ### 텍스트 공간 (`text_space`)
 
+> **2026-04-26 정책 변경 — 상단/하단 zoning 규칙 폐지.**
+> 모든 채널은 `"full"` 캔버스를 사용한다. 핵심 피사체를 상단 2/3에 두거나, 하단 1/3을 자막용으로 비워두는 zoning은 더 이상 적용하지 않는다. 캔버스 전체에 자유롭게 작화 (자막은 후편집에서 자유롭게 얹는다).
+
 | 값 | 구도 규칙 |
 |----|----------|
-| `bottom-half` | **상단 1/2에 핵심 피사체를 좌우 꽉 차게** 배치. **하단 1/2는 단순 배경만** — 인물 얼굴, 로고, 핵심 오브젝트 등 중요한 요소가 하단에 오면 안 됨. **(기본값)** |
-| `bottom-third` | **캔버스 전체(1280x720, 16:9)를 한 장의 자연스러운 그림으로 끊김 없이 채움** (강제로 비워두는 영역 없음). **핵심 피사체(인물 얼굴, 시선 끌기 요소, 고대비·중요 디테일)는 상단 2/3에 우선 배치**. **하단 1/3은 같은 장면의 자연스러운 연장** — 배경의 그라데이션, 안개, 인물 어깨 라인, 책상/풀밭 등 차분한 톤으로 채워서 자막을 후편집으로 얹기 좋게 함. **자막 영역엔 강한 디테일·인물 얼굴·고대비 요소를 두지 말 것**. 자막 배경 처리(반투명 박스/그라데이션/글자만)는 후편집에서 자유롭게 선택. AI는 placeholder 텍스트를 그리지 않는다. |
-| `full` | 전체 프레임을 이미지로 채움. 텍스트 공간 확보 불필요. 피사체를 프레임 전체에 배치. |
-| `left-right` | 핵심 피사체를 한쪽(좌 또는 우)에 배치. 반대쪽은 단순 배경으로 텍스트 공간 확보. |
+| `full` | 전체 프레임을 한 장의 완성된 그림으로 채움. **상단/하단 zoning 없음**, 자유 구도. **(기본값)** |
+| `left-right` | 핵심 피사체를 한쪽(좌 또는 우)에 배치, 반대쪽은 단순 배경으로 여유 공간 확보. (좌우 zoning만, 상하 zoning 없음) |
+
+> **(deprecated)** `bottom-half`, `bottom-third`는 더 이상 사용하지 않는다. 기존 strategy 파일에 남아 있어도 `"full"`로 처리된다.
 
 > **boilerplate 처리**:
 > - **[CANVAS] 캔버스 선언**(`[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, horizontal YouTube thumbnail format`)은 **규칙 0번에 따라 prompt_en/concept_ko 맨 앞에 직접 작성한다.** `generate_thumbnails.py`도 같은 문구를 안전망으로 추가하지만, 중복은 자동으로 제거되므로 항상 작성할 것.
-> - 아래는 `generate_thumbnails.py`가 `text_space` 설정에 따라 자동 추가하므로 prompt_en에 포함하지 않는다:
->   1. 구도 규칙 (`text_space`에 해당하는 composition 지시문)
->   2. 텍스트 금지 (`STRICTLY NO TEXT: ... no placeholder text, no subtitles, no watermark`)
+> - 텍스트 금지 문구(`STRICTLY NO TEXT: ... no placeholder text, no subtitles, no watermark`)는 `generate_thumbnails.py`가 자동 추가하므로 prompt_en에 포함하지 않는다.
+> - **상단/하단 구도 지시문은 boilerplate에서 제거됨** — 작가가 prompt_en/concept_ko에 별도로 zoning을 적지 않는다.
 
 ### 인물 표현 (`face_style`)
 

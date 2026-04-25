@@ -35,38 +35,24 @@ def load_thumbnail_strategy(channel: str | None) -> dict | None:
 
 
 def get_prompt_suffixes(strategy: dict | None) -> list[str]:
-    """Build boilerplate suffixes based on channel's thumbnail strategy."""
+    """Build boilerplate suffixes based on channel's thumbnail strategy.
+
+    2026-04-26: upper/lower zoning rules removed. All channels use full canvas;
+    only `left-right` still supplies a composition hint.
+    """
     suffixes = [
         "[CANVAS] 16:9 aspect ratio, exactly 1280x720 pixels, "
         "horizontal YouTube thumbnail format",
     ]
 
-    # Text space / composition rule
-    text_space = (strategy or {}).get("text_space", "bottom-half")
+    text_space = (strategy or {}).get("text_space", "full")
 
-    if text_space == "bottom-half":
-        suffixes.append(
-            "all key visual elements and the main subject fill the upper half "
-            "of the frame edge to edge, the bottom half of the frame is reserved "
-            "for text overlay and should contain only simple background with no "
-            "important elements"
-        )
-    elif text_space == "bottom-third":
-        suffixes.append(
-            "LAYOUT: all visual elements (subjects, objects, effects, shadows) "
-            "concentrated in the upper two-thirds of the frame with clear margin "
-            "from the boundary — nothing cropped or cut off at the 2/3 line. "
-            "The bottom one-third of the frame is a completely plain solid dark "
-            "background, 100% empty, no objects, no shadows, no glow, no gradient, "
-            "no spillover from the upper area, reserved for text that will be "
-            "added later in post-production by the user"
-        )
-    elif text_space == "left-right":
+    if text_space == "left-right":
         suffixes.append(
             "main subject positioned on one side of the frame, the opposite side "
-            "contains simple background suitable for text overlay"
+            "contains simple background"
         )
-    # text_space == "full" → no composition suffix (full-frame image)
+    # All other values (full / legacy bottom-half / bottom-third) → no composition suffix.
 
     suffixes.append(
         "STRICTLY NO TEXT: absolutely no letters, no words, no numbers, "
