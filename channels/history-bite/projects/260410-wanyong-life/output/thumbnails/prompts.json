@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "project": "260410-wanyong-life",
+    "titles": [
+      "\"독립을 외치던 충신이었습니다\" 이완용, 나라를 팔아먹기까지의 소름끼치는 과정",
+      "독립협회 위원장에서 을사오적으로, 이완용의 배신의 일생 (+사후 심판)",
+      "이완용은 처음부터 매국노가 아니었다 — 충신이 나라를 판 진짜 이유"
+    ],
+    "thumbnail_texts": [
+      "\"독립협회 위원장\" + \"이완용\" + \"에서 매국노로\"",
+      "\"충신에서 매국노\" + \"이완용\" + \"나라를 판 대가 830억\"",
+      "\"독립을 외치다 나라를 팔다\" + \"이완용\" + \"그 10년의 기록\""
+    ],
+    "image_concepts": {
+      "A": "Before→After 대비: 충신 시절(밝은 세피아)과 매국노 시절(어두운 그림자)의 이완용 대비, 중앙 균열선",
+      "B": "인물 감정 + 상징물 배경: 이완용 흑백 초상 뒤로 부서지는 독립문"
+    }
+  },
+  "thumbnails": [
+    {
+      "id": 1,
+      "type": "concept-a-photorealistic",
+      "concept_ko": "컨셉 A 실사. 좌측에 독립협회 시절 당당한 이완용(밝은 세피아 톤), 우측에 을사조약 서명 후 어두운 이완용(짙은 그림자). 중앙에 빨간 균열선. 상단 2/3에 이미지 집중. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Wide 16:9 horizontal landscape YouTube thumbnail composition. Cinematic photorealistic split composition of Lee Wan-yong (Korean politician, late Joseon Dynasty). Left side shows him in bright sepia tone wearing traditional Korean official robes with a dignified expression, warm lighting suggesting his early patriotic era. Right side shows the same figure in deep shadow and desaturated cold tones, signing a document with a grim calculating expression. A vivid red crack line splits the center vertically. Desaturated monochrome palette with single red accent on the crack. All key visual elements concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay. No text, no letters, no words, no numbers, no watermark."
+    },
+    {
+      "id": 2,
+      "type": "concept-b-anime",
+      "concept_ko": "컨셉 B 애니메. 이완용 흑백 초상이 상단 중앙에 배치, 배경에 독립문이 균열과 함께 부서지는 이미지. 모노톤 흑백 + 빨강 포인트(균열). 상단 2/3에 이미지 집중. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Wide 16:9 horizontal landscape YouTube thumbnail composition. Dramatic anime-style illustration of Lee Wan-yong (Korean politician, late Joseon Dynasty) as a monochrome portrait centered in the upper frame, with a cold calculating expression and sharp angular features. Behind him, the Independence Gate (Dongnimmun) of Korea crumbles and fractures with vivid red cracks spreading across its stone surface. Dark atmospheric ink-wash style background with high contrast black and white tones, red accent only on the cracks and fracture lines. Bold cel-shaded outlines with dramatic chiaroscuro lighting. All key visual elements concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay. No text, no letters, no words, no numbers, no watermark."
+    },
+    {
+      "id": 3,
+      "type": "wildcard",
+      "concept_ko": "와일드카드. 대한제국 어새(국새)가 두 동강 나며 부서지는 순간을 극적으로 포착. 균열 사이로 일본 국기(흰 바탕 빨간 원)의 빛이 비친다. 모노톤 + 빨강 포인트. 상단 2/3에 이미지 집중. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Wide 16:9 horizontal landscape YouTube thumbnail composition. Cinematic dark photograph of the Korean Imperial Seal (royal jade seal of the Korean Empire) cracking and splitting apart in dramatic slow-motion, fragments suspended in the air. Through the central crack, an ominous red glow emanates suggesting the Japanese national flag (white flag with red circle). Desaturated monochrome palette with deep shadows, single vivid red accent light from the crack. Dramatic rim lighting on the seal fragments creating a sense of irreversible destruction. All key visual elements concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay. No text, no letters, no words, no numbers, no watermark."
+    }
+  ]
+}

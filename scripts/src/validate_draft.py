@@ -14,6 +14,10 @@ import re
 import sys
 from pathlib import Path
 
+if sys.platform == "win32" and hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 # ── outline.md 파트 목표 추출 ──────────────────────────────────
 _OUTLINE_PART_RE = re.compile(
     r"^###\s+(.+?)\s*\(~?[\d.]+분(?:\s*\d+초)?,\s*~?([\d,]+)자\)", re.MULTILINE

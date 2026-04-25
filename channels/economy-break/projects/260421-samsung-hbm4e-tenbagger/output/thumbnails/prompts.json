@@ -1,0 +1,35 @@
+{
+  "project": "260421-samsung-hbm4e-tenbagger",
+  "channel": "economy-break",
+  "title": "\"2018년 1년치를 한 분기에 벌었습니다\" 2년 암흑기 끝낸 삼성전자, 메가사이클의 진짜 시작",
+  "count": 4,
+  "text_space": "bottom-third",
+  "emotions": ["shock", "tension"],
+  "color_palette": "dark",
+  "prompts": [
+    {
+      "id": "A-photorealistic",
+      "concept": "Before-After Contrast",
+      "style": "photorealistic",
+      "prompt": "Photorealistic cinematic split composition, dark moody cinematic atmosphere, dramatic contrast. Left half: a dim gray Samsung Electronics logo with a steep downward red stock chart arrow and cracks, overcast factory silhouette in 2023 background, desaturated tones suggesting crisis. Right half: a brightly glowing luminous Samsung Electronics logo with a massive upward soaring teal arrow and floating HBM memory chip stacks radiating blue light, skyscraper cityscape of Pyeongtaek in 2026 background, vivid teal and cyan accents. Deep shadows, dramatic moody lighting, extreme contrast between sides. The top 60 percent holds the visual; bottom third is empty clean negative space for overlay text. No text, no letters, no words in the image. Ultra detailed, 8k, shot on ARRI Alexa, shallow depth of field. Dark cinematic atmosphere with deep shadows and dramatic contrast."
+    },
+    {
+      "id": "A-anime",
+      "concept": "Before-After Contrast",
+      "style": "anime",
+      "prompt": "Vibrant anime-style illustration with cinematic lighting, dramatic contrast split composition, stylized digital illustration. Left half: a somber dark Samsung Electronics logo with a jagged downward red chart line, cracked glass overlay, gloomy 2023 factory silhouette, desaturated blue-gray palette conveying defeat. Right half: a radiant Samsung Electronics logo emitting blue and cyan light rays, a glowing HBM4 memory chip stack floating with sparkles, explosive upward teal arrow, futuristic 2026 Pyeongtaek cityscape, vivid neon teal highlights on dark background. Expressive dynamic composition like a Shonen manga turning point, ominous to triumphant. Top 60 percent holds the visual, bottom third kept as clean empty space for overlay text. No text, no letters, no words in the image."
+    },
+    {
+      "id": "B-hybrid",
+      "concept": "Executive Determination",
+      "style": "hybrid",
+      "prompt": "Hybrid photorealistic-to-illustration cinematic portrait, dark moody atmosphere with dramatic side-lighting. A determined stern East Asian male executive in his late 60s wearing a dark navy suit (representing Samsung DS division chief), extreme close-up from chest up, eyes focused forward with resolve and quiet intensity, slightly exaggerated dramatic expression. Behind him, three towering glowing HBM4 memory chip stacks floating in darkness — one fully illuminated bright teal on the left, one half-lit in the center, one dim and waiting on the right — like Thanos Infinity Stones symbolism. Deep cinematic shadows, dramatic rim lighting outlining the subject, dark navy background with teal accents and red crisis undertones fading. Ominous yet hopeful tone. Top 60 percent holds the visual; bottom third is clean empty dark negative space for overlay text. No text, no letters, no words, no logos visible in the image. 8k ultra detailed."
+    },
+    {
+      "id": "Wildcard-cozy",
+      "concept": "Cozy Storybook Rebirth",
+      "style": "cozy-storybook",
+      "prompt": "Ghibli-style warm watercolor storybook illustration with cozy nostalgic atmosphere, hand-painted texture, soft brush strokes, but adapted to a darker moody color palette with deep navy and teal accents for tension. A tiny silhouetted figure in a suit stands on a hill at dawn, looking at a massive glowing semiconductor fabrication plant in the distance (representing Samsung Pyeongtaek 5 fab), three enormous memory chip towers rising into a dark indigo sky filled with starlight and drifting aurora light like hope returning after long winter. Soft painterly light, dreamy but serious, deep navy and cool teal dominant with warm golden light glowing from the fab windows. Whimsical and emotional rebirth metaphor. Top 60 percent holds the artwork; bottom third kept as clean empty space for overlay text. No text, no letters, no words, no logos in the image."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "project": "260411-ceasefire-crisis",
+    "titles": [
+      "\"88분 전이었습니다\" 미이란 휴전 뒤 한국을 덮칠 소름 돋는 진실",
+      "최후통첩 88분 전 극적 합의, 그런데 이게 평화가 아니었다",
+      "\"가짜 평화입니다\" 미이란 휴전의 숨겨진 속셈과 한국 경제 시한폭탄"
+    ],
+    "thumbnail_texts": [
+      "88분의 기적 + 숨겨진 진실",
+      "가짜 평화 + 진짜 위기",
+      "폭격 88분 전 + 극적 합의"
+    ],
+    "image_concepts": {
+      "A": "트럼프 승리 포즈 + 카운트다운 시계, 화염 배경에 미국·이란기 대립",
+      "B": "균열 가는 하얀 비둘기(평화 상징), 균열 속 빨간 화염, 전쟁 폐허 배경"
+    }
+  },
+  "thumbnails": [
+    {
+      "id": 1,
+      "type": "concept-a-photorealistic",
+      "concept_ko": "컨셉 A 실사. 상단 2/3에 트럼프가 승리 포즈를 취하고 있고, 배경에 거대한 디지털 시계가 00:88을 표시. 시계 뒤로 화염과 연기. 미국기와 이란기가 양쪽에 배치. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Photorealistic cinematic photograph of Donald Trump in a triumphant victory pose, fist raised, with a dramatic expression. Behind him, a massive digital countdown clock displays '00:88' in glowing red numbers. The background features billowing flames and dark smoke. American flag on the left side and Iranian flag on the right side create a stark contrast. All key visual elements concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay. Dark cinematic atmosphere with deep shadows and dramatic contrast, moody lighting with orange fire glow."
+    },
+    {
+      "id": 2,
+      "type": "concept-b-anime",
+      "concept_ko": "컨셉 B 애니메. 상단 2/3에 하얀 비둘기가 중앙에 크게 배치, 비둘기 몸체에 균열이 퍼지며 안에서 빨간 화염이 새어 나온다. 배경은 어두운 전쟁 폐허. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Dramatic anime-style illustration of a large white peace dove at the center, its body cracking apart with deep fissures spreading across its surface. Intense red and orange flames leak through the cracks from within. The background shows a dark, destroyed cityscape with ruins and smoke in deep navy and gray tones. Bold ink outlines and cel-shaded dramatic lighting emphasize the contrast between the pure white dove and the fiery destruction within. All key visual elements concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay. Ominous atmosphere with tension and foreboding."
+    },
+    {
+      "id": 3,
+      "type": "wildcard",
+      "concept_ko": "와일드카드. 상단 2/3에 호르무즈 해협을 위에서 내려다보는 항공 뷰. 좁은 해협 양쪽에서 미국 항공모함과 이란 군함이 대치. 해협 위로 거대한 빨간 X 표시가 봉쇄를 상징. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Hybrid style digital illustration combining photorealistic ocean textures with stylized graphic elements. Aerial top-down view of the narrow Strait of Hormuz with dark navy waters. On one side, a US aircraft carrier battle group, on the other side, Iranian naval vessels in a tense standoff. A massive glowing red X mark overlays the strait symbolizing blockade. Oil tankers caught between the two forces. Dark cinematic atmosphere with deep shadows and dramatic contrast. All key visual elements concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay."
+    }
+  ]
+}

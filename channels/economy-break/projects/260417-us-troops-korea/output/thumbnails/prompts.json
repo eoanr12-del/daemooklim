@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "project": "260417-us-troops-korea",
+    "titles": [
+      "\"한국 없으면 미국이 망해요\" 트럼프가 입으로만 협박하는 진짜 이유 (5000억 달러의 비밀)",
+      "트럼프가 한국만 못 건드리는 이유? 미국이 한국에 묶인 5000억 달러",
+      "미국이 한국 없으면 안 되는 4가지 이유, 방위비 1.5조가 싸게 느껴지는 진짜 계산"
+    ],
+    "thumbnail_texts": [
+      "진짜 못 빼요? + 한국은 못 건드려... + 트럼프도 무릎 꿇는 + 5,000억 달러의 비밀",
+      "망한다니까? + 한국 놓치면 끝... + 미국이 매달리는 + 1,600조 진짜 이유",
+      "의리라고요? + 계산하면 답 나와... + 미국이 한국에 묶인 + 달러로 보는 진실"
+    ],
+    "image_concepts": {
+      "A": "A vs B + 돈더미 — 좌측 당혹한 트럼프, 우측 여유로운 한국 상징, 중앙 하단 달러 다발과 한화필리조선소 컨테이너선",
+      "B": "미해군 함정 균열 — 함정에 금이 가고 그 틈에서 한화 로고와 태극기가 빛을 내며 비집고 나오는 반전 구도"
+    }
+  },
+  "thumbnails": [
+    {
+      "id": 1,
+      "type": "concept-a-photorealistic",
+      "concept_ko": "컨셉 A 실사. 상단 2/3에 좌측 당혹한 표정의 Donald Trump(President of the United States), 우측에 여유로운 태극기 배경, 중앙에 100달러 다발이 쌓여있고 뒤로 한화필리조선소의 거대한 컨테이너선 실루엣. 하단 1/3은 완전히 비어있는 어두운 배경(텍스트는 후편집으로 삽입하므로 AI는 글자·숫자·타이포그래피를 절대 그리지 말 것). 상단 이미지는 경계선에서 잘리지 않도록 여유있게 배치.",
+      "prompt_en": "Photorealistic cinematic composition. On the left, Donald Trump (President of the United States) with a stunned, frustrated expression, hands raised in helpless gesture. On the right, a large South Korean flag waves proudly in dramatic lighting. In the center foreground, towering stacks of US hundred-dollar bills glow under spotlights, with the massive silhouette of a Hanwha Philly Shipyard container ship rising in the background. Dark cinematic navy-black atmosphere with deep shadows, intense red and green accent lighting, dramatic contrast highlighting the money stacks. LAYOUT: all visual elements (Trump, flag, money stacks, ship) concentrated in the upper two-thirds of the frame with clear margin from the boundary — nothing cropped or cut off at the 2/3 line. The bottom one-third of the frame is a completely plain solid dark background, 100% empty, no objects, no shadows, no glow, no gradient, no spillover from the upper area. STRICTLY NO TEXT: absolutely no letters, no words, no numbers, no typography, no captions, no placeholder text, no subtitles anywhere in the image — the bottom dark area is reserved for text that will be added later in post-production by the user, not by the AI."
+    },
+    {
+      "id": 2,
+      "type": "concept-b-anime",
+      "concept_ko": "컨셉 B 애니메. 상단 2/3에 US Navy 군함 실루엣이 거대한 균열로 부서지고 있으며, 그 균열 틈새에서 한화 로고와 태극기가 밝은 빛을 내며 비집고 나오는 반전 구도. 하단 1/3은 완전히 비어있는 어두운 배경(텍스트는 후편집으로 삽입하므로 AI는 글자·숫자·타이포그래피를 절대 그리지 말 것). 상단 이미지는 경계선에서 잘리지 않도록 여유있게 배치.",
+      "prompt_en": "Anime-style illustration of a massive US Navy warship silhouette breaking apart with dramatic cracks and fractures spreading across its hull. Through the bright glowing cracks, the Hanwha corporate logo and the South Korean flag burst outward with intense golden and red light rays. Bold ink outlines, cel-shaded dramatic lighting, deep black and grey background contrasting with the brilliant yellow-orange crack light. Intense atmosphere of reversal and revelation. LAYOUT: all visual elements (warship, cracks, logo, flag, light rays) concentrated in the upper two-thirds of the frame with clear margin from the boundary — nothing cropped or cut off at the 2/3 line. The bottom one-third of the frame is a completely plain solid dark background, 100% empty, no objects, no shadows, no glow, no gradient, no spillover from the upper area. STRICTLY NO TEXT: absolutely no letters, no words, no numbers, no typography, no captions, no placeholder text, no subtitles anywhere in the image — the bottom dark area is reserved for text that will be added later in post-production by the user, not by the AI."
+    },
+    {
+      "id": 3,
+      "type": "wildcard-hybrid",
+      "concept_ko": "와일드카드. 상단 2/3에 거대한 미국 의회 의사당 건물과 백악관이 굵은 황금 사슬로 한국 지도 모양에 묶여있는 초현실적 구도. 빠져나가려 해도 묶여서 움직이지 못하는 상태. 하단 1/3은 완전히 비어있는 어두운 배경(텍스트는 후편집으로 삽입하므로 AI는 글자·숫자·타이포그래피를 절대 그리지 말 것). 상단 이미지는 경계선에서 잘리지 않도록 여유있게 배치.",
+      "prompt_en": "Hybrid 3D-rendered surreal composition showing the US Capitol Building and White House tied by massive thick golden chains to a glowing outline of the Korean peninsula. The buildings appear to strain against the chains as if trying to escape, but are firmly anchored. Dark dramatic black and navy sky background with thunderclouds, volumetric lighting illuminating the chains with golden glow. Korean peninsula emits a subtle mint-green light, creating strong visual tension and the concept of bondage through economic ties. LAYOUT: all visual elements (buildings, chains, peninsula, clouds) concentrated in the upper two-thirds of the frame with clear margin from the boundary — nothing cropped or cut off at the 2/3 line. The bottom one-third of the frame is a completely plain solid dark background, 100% empty, no objects, no shadows, no glow, no gradient, no spillover from the upper area. STRICTLY NO TEXT: absolutely no letters, no words, no numbers, no typography, no captions, no placeholder text, no subtitles anywhere in the image — the bottom dark area is reserved for text that will be added later in post-production by the user, not by the AI."
+    },
+    {
+      "id": 4,
+      "type": "cozy-storybook",
+      "concept_ko": "포근한 동화책 수채화 스타일(지브리 감성). 상단 2/3 — 따뜻한 등불이 켜진 작은 항구 부둣가 사무실 창가, 둥근 머리에 표정이 최소화된(작은 점 눈, 당황한 듯 살짝 벌어진 입) 정장 차림의 미국 상징 캐릭터가 살짝 좌측에 앉아 한 손엔 100달러 다발을 꼭 쥔 채 다른 손목은 작고 둥근 한국 캐릭터(한복 포인트)가 부드럽게 잡고 놓아주지 않는다. 두 캐릭터 사이엔 따뜻한 금빛 동전으로 엮인 얇은 사슬이 떠 있고, 캐릭터 주변으로 은은한 gold 글로우(hope/묶임)가 감돈다. 창밖으론 작은 컨테이너선과 군함 실루엣이 부둣가에 정박해 있어 '떠나고 싶지만 떠나지 못하는' 분위기. 옆에는 한국 지도와 태극기가 그려진 작은 노트, 따뜻한 찻잔, 낡은 등잔 같은 lived-in 디테일 2~3개. 수채 텍스처의 파스텔(베이지, 더스티 블루, 세이지 그린, 웜 브라운, 크림), 손그림 잉크 아웃라인, 소프트 셰이딩. 하단 1/3은 완전히 비어있는 어두운 배경(텍스트는 후편집으로 삽입하므로 AI는 글자·숫자·타이포그래피를 절대 그리지 말 것). 상단 이미지는 경계선에서 잘리지 않도록 여유있게 배치.",
+      "prompt_en": "[STYLE — FIXED] Cozy storybook illustration style, soft watercolor and pastel textures, warm muted color palette (beige, dusty blue, sage green, warm brown, cream). Simple round-headed character with minimal facial features (small dot eyes, subtle gentle expressions). Hand-drawn ink outlines with soft shading. Ghibli-inspired atmosphere with cinematic lighting and lived-in environmental details. Consistent character design across all scenes. [SCENE] A round-headed American-symbol character in a dark suit sits slightly left of center at a small harbor office window, small dot eyes widened in gentle bewilderment, clutching a neat bundle of US hundred-dollar bills in one hand. His other wrist is softly held by a smaller round-headed Korean-symbol character wearing a subtle hanbok accent, who calmly will not let go — tender but firm grip. Between them floats a thin chain made of warm golden coins linking their wrists, and a soft golden symbolic glow for hope and quiet entanglement wraps both figures. Through the window, tiny container ship and warship silhouettes are anchored at the dock, visually conveying 'wants to leave but cannot'. [BACKGROUND] A small cozy harbor office at warm golden-hour lamplight, with the setting sun glowing from the upper right through a wooden-framed window. Include 2-3 contextual props: a small handwritten notebook with a Korean peninsula map and a tiny taegeuk flag sketch beside the characters, a warm ceramic tea cup with soft steam, and a worn brass oil lamp on the desk. The atmosphere is warm, bittersweet, quietly ironic — a giant caught by a gentle smaller figure. [COMPOSITION] Character duo slightly left of center in the upper two-thirds of the frame, gentle negative space balanced around the figures. LAYOUT: all visual elements (American character, Korean character, coin chain, ship silhouettes, notebook, tea, lamp, window) concentrated in the upper two-thirds of the frame with clear margin from the boundary — nothing cropped or cut off at the 2/3 line. The bottom one-third of the frame is a completely plain solid dark background, 100% empty, no objects, no shadows, no glow, no gradient, no spillover from the upper area. [RESTRICTION — FIXED] No text, no letters, no numbers, no watermarks, no logos, no signage. STRICTLY NO TEXT: absolutely no letters, no words, no numbers, no typography, no captions, no placeholder text, no subtitles anywhere in the image — the bottom dark area is reserved for text that will be added later in post-production by the user, not by the AI."
+    }
+  ]
+}

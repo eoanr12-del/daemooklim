@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "project": "260414-samsung-foundry",
+    "titles": [
+      "\"TSMC가 거절했다\" 테슬라 22조, 엔비디아 29조가 삼성으로 몰리는 이유",
+      "삼성 파운드리, 시장점유율 4%에서 대반전이 시작됐다",
+      "\"22조 수주는 시작일 뿐\" 삼성전자 파운드리가 다시 무서워진 진짜 이유"
+    ],
+    "thumbnail_texts": [
+      "TSMC '주문 거절' + 삼성전자 대반전",
+      "'22조 수주는 시작' + 삼성 파운드리의 역습",
+      "점유율 4%의 반격 + 빅테크가 줄을 선다"
+    ],
+    "image_concepts": {
+      "A": "TSMC vs 삼성 대결 — TSMC 로고에 SOLD OUT, 삼성 로고에 빛이 쏠리는 역전 구도",
+      "B": "삼성 평택 반도체 공장에 균열 사이로 골든 빛이 터져 나오는 부활 이미지"
+    }
+  },
+  "thumbnails": [
+    {
+      "id": 1,
+      "type": "concept-a-photorealistic",
+      "concept_ko": "컨셉 A 실사. 상단 2/3에 TSMC 로고(어둡게, SOLD OUT 스탬프)와 삼성 로고(밝은 블루 광선)가 좌우로 대비되는 시네마틱 장면. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Photorealistic cinematic split composition. Left side shows the TSMC logo darkened and faded with a large red 'SOLD OUT' stamp across it, shrouded in deep shadows. Right side shows the Samsung Electronics logo glowing brilliantly in Samsung blue with golden light rays radiating outward, symbolizing a dramatic power shift. Dark cinematic atmosphere with deep navy-black background, dramatic contrast between the dimmed TSMC and the luminous Samsung. Moody ominous lighting on the left transitioning to hopeful golden illumination on the right."
+    },
+    {
+      "id": 2,
+      "type": "concept-b-anime",
+      "concept_ko": "컨셉 B 애니메. 상단 2/3에 어둠 속 삼성 평택 반도체 공장 건물에 균열 사이로 골든 빛이 폭발적으로 터져 나오는 장면. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Anime-style illustration of Samsung Pyeongtaek semiconductor campus emerging from darkness. The massive factory complex is shown with dramatic golden-white light bursting through cracks and fissures across its dark silhouette, creating an explosive rebirth visual. Vibrant anime art with bold ink outlines, exaggerated light beams shooting upward, deep navy-indigo sky background contrasting with brilliant golden energy cracks. Dramatic cel-shaded lighting creates an atmosphere of powerful awakening and technological revival."
+    },
+    {
+      "id": 3,
+      "type": "wildcard-hybrid",
+      "concept_ko": "와일드카드. 상단 2/3에 거대한 반도체 웨이퍼 위에 Tesla, NVIDIA, Amazon 로고가 삼성 방향으로 화살표와 함께 몰려드는 구도. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Hybrid 3D-rendered and photorealistic composition showing a massive glowing Samsung semiconductor wafer at center, with the logos of Tesla, NVIDIA, and Amazon converging toward it along dramatic golden arrow paths. The Samsung wafer radiates brilliant blue-white light while the three company logos appear as if magnetically drawn to it. Dark cinematic black background with dramatic volumetric lighting, neon-edge glow effects on the wafer, and dynamic motion blur on the converging arrows creating a sense of urgent momentum."
+    }
+  ]
+}

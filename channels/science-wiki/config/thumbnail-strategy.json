@@ -1,0 +1,14 @@
+{
+  "count": 5,
+  "art_styles": ["photorealistic", "anime", "hybrid", "cozy-storybook", "2d-illustration"],
+  "color_palette": "neon",
+  "emotions": ["shock", "curiosity"],
+  "text_space": "bottom-third",
+  "face_style": "auto",
+  "brand": {
+    "colors": [],
+    "mascot": false,
+    "fixed_layout": null
+  },
+  "benchmark_analysis": null
+}

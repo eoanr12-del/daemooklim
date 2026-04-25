@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "project": "twilight-love-stories",
+    "titles": [
+      "식당 설거지 아줌마, 매일 오던 그 손님의 정체를 알고 나서 잠을 잘 수가 없었다",
+      "이혼 후 7년, 매주 같은 자리에 앉던 단골 손님이 건넨 우산 하나의 의미",
+      "\"보온병 하나가 다시 살아볼 이유가 됐습니다\" 설거지 아줌마와 단골 손님의 실화"
+    ],
+    "thumbnail_texts": [
+      "매일 오던 손님 / 정체를 알고서",
+      "단골손님의 보온병 / 비밀을 알고서",
+      "이혼후 7년뒤 / 우산이 바꿨다"
+    ],
+    "image_concepts": {
+      "A": "비 오는 밤 식당 앞 — 우산을 건네는 남성과 당혹한 표정의 여성, 따뜻한 조명 속 감정 교류",
+      "B": "보온병 클로즈업 — 낡은 식당 테이블 위 보온병과 김치찌개, 두 사람의 손이 가까이"
+    }
+  },
+  "thumbnails": [
+    {
+      "id": 1,
+      "type": "concept-a-photorealistic",
+      "concept_ko": "컨셉 A 실사. 상단 2/3에 비 오는 밤 작은 식당 앞, 우산을 건네는 중년 남성과 놀란 표정의 앞치마 입은 중년 여성. 따뜻한 식당 불빛이 두 사람을 비추는 감성적 장면. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Dark cinematic photograph of a rainy night scene outside a small Korean restaurant. An attractive middle-aged Korean man in a neat casual jacket is offering an umbrella to a surprised middle-aged Korean woman wearing a worn apron, standing in the restaurant doorway. Warm golden light spills from the restaurant interior, illuminating both figures against the dark rainy night. Rain droplets catch the warm light creating a romantic bokeh effect. Their expressions convey a tender, unexpected emotional connection. Moody desaturated color palette with warm amber accent lighting from the restaurant. All key visual elements concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay."
+    },
+    {
+      "id": 2,
+      "type": "concept-b-anime",
+      "concept_ko": "컨셉 B 애니메. 상단 2/3에 낡은 식당 테이블 위 보온병과 김치찌개 클로즈업. 테이블 양쪽에 두 사람의 손이 가까이 놓여 있는 따뜻한 구도. 부드러운 조명과 김이 모락모락. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Warm anime-style illustration of a close-up scene on a worn wooden table inside a cozy small Korean restaurant. In the center, a vintage thermos bottle and a steaming bowl of kimchi jjigae. On opposite sides of the table, two hands rest close together but not touching — a woman's weathered hand with short nails on the left, and a man's gentle hand on the right. Soft warm golden lighting from above, steam rising from the stew creating a dreamy atmosphere. Muted pastel warm tones with amber and soft orange accents. Cel-shaded art with expressive linework emphasizing warmth and quiet affection. All key visual elements concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay."
+    },
+    {
+      "id": 3,
+      "type": "wildcard",
+      "concept_ko": "와일드카드. 상단 2/3에 비에 젖은 투명 우산 클로즈업, 우산 너머로 따뜻한 식당 불빛과 두 실루엣이 어렴풋이 보이는 이중노출 효과. 감성적이고 몽환적인 분위기. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Cinematic photograph of a rain-soaked transparent umbrella in dramatic close-up, water droplets covering its surface and catching light. Through the umbrella, a double-exposure effect reveals the warm glowing interior of a small Korean restaurant with two blurred silhouettes sitting across from each other at a table. The warm amber restaurant light contrasts beautifully with the cold blue-grey rain outside. Dreamy, emotional atmosphere with soft bokeh of raindrops and warm lights. Desaturated monochrome base with selective warm amber and cool blue accent colors. All key visual elements concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay."
+    }
+  ]
+}

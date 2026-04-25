@@ -50,6 +50,16 @@ def get_prompt_suffixes(strategy: dict | None) -> list[str]:
             "for text overlay and should contain only simple background with no "
             "important elements"
         )
+    elif text_space == "bottom-third":
+        suffixes.append(
+            "LAYOUT: all visual elements (subjects, objects, effects, shadows) "
+            "concentrated in the upper two-thirds of the frame with clear margin "
+            "from the boundary — nothing cropped or cut off at the 2/3 line. "
+            "The bottom one-third of the frame is a completely plain solid dark "
+            "background, 100% empty, no objects, no shadows, no glow, no gradient, "
+            "no spillover from the upper area, reserved for text that will be "
+            "added later in post-production by the user"
+        )
     elif text_space == "left-right":
         suffixes.append(
             "main subject positioned on one side of the frame, the opposite side "
@@ -57,7 +67,11 @@ def get_prompt_suffixes(strategy: dict | None) -> list[str]:
         )
     # text_space == "full" → no composition suffix (full-frame image)
 
-    suffixes.append("no text, no letters, no words, no numbers, no watermark")
+    suffixes.append(
+        "STRICTLY NO TEXT: absolutely no letters, no words, no numbers, "
+        "no typography, no captions, no placeholder text, no subtitles, "
+        "no watermark anywhere in the image"
+    )
 
     return suffixes
 

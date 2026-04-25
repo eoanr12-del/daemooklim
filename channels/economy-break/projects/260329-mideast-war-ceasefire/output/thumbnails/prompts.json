@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "project": "mideast-war-ceasefire",
+    "titles": [
+      "\"유가 4배 폭등\" 1973년의 악몽이 2026년에 반복되는 이유",
+      "중동전쟁 터지면 내 월급은? 1973 오일쇼크가 다시 온다",
+      "호르무즈 해협이 막히면 벌어지는 일, 1973년이 증명했다"
+    ],
+    "thumbnail_texts": [
+      "오일쇼크 재현 + 당신의 월급이 위험하다",
+      "1973년이 돌아온다 + 유가 4배의 공포",
+      "호르무즈가 막힌다 + 물가 폭탄 시작"
+    ],
+    "image_concepts": {
+      "A": "역사 재현 분할 — 1973 유전 화재 vs 2026 호르무즈 위기 시간 대비",
+      "B": "도미노 붕괴 — 유전→해협→유조선→주유소 연쇄 반응 시각화"
+    }
+  },
+  "thumbnails": [
+    {
+      "id": 1,
+      "type": "concept-a-photorealistic",
+      "concept_ko": "컨셉 A 실사. 상단 2/3에 좌측 1973년 흑백 유전 화재, 우측 2026년 호르무즈 군함과 화염. 하단 1/3은 어두운 배경만.",
+      "prompt_en": "Dark cinematic split-screen photograph, wide 16:9 aspect ratio. All key visual elements concentrated in the upper two-thirds of the frame. Left half in desaturated sepia tone: a massive 1973 oil well fire with towering black smoke plumes against a desert sky. Right half in vivid dramatic color: modern warships patrolling the narrow Strait of Hormuz with orange-red flames reflecting on dark water. A sharp vertical dividing line separates the two eras. The bottom third of the image is empty dark background with subtle smoke haze, no important objects or details. Deep shadows with dramatic contrast, ominous atmosphere of history repeating itself."
+    },
+    {
+      "id": 2,
+      "type": "concept-a-anime",
+      "concept_ko": "컨셉 A 애니메. 상단 2/3에 역사 재현 분할 (좌 세피아 1973 유전 화재, 우 붉은 현대 해협 위기). 하단 1/3은 비움.",
+      "prompt_en": "Vibrant anime-style illustration, wide 16:9 aspect ratio. All key visual elements concentrated in the upper two-thirds of the frame. Left half in muted sepia-toned retro anime style: blazing oil derricks with stylized black smoke swirls, 1973 atmosphere. Right half in bold saturated modern anime colors: sleek warships in a narrow strait with exaggerated orange-red explosions and dramatic wave effects. The bottom third is minimal dark background with faint color wash only, no characters or objects. Intense cel-shaded lighting with sharp contrast between the faded past and vivid present crisis. Bold ink outlines, dynamic perspective."
+    },
+    {
+      "id": 3,
+      "type": "wildcard",
+      "concept_ko": "와일드카드. 상단 2/3에 거대한 석유 배럴이 균열과 함께 붕괴. 배럴 표면에 세계 지도, 중동이 빨갛게 빛남. 하단 1/3은 어두운 배경만.",
+      "prompt_en": "Dark cinematic photograph, wide 16:9 aspect ratio. A massive oversized oil barrel cracking and fracturing dramatically, positioned in the upper two-thirds of the frame. A world map is projected onto the barrel's surface, with the Middle East region glowing bright red through deep cracks. Shards of metal peel away revealing intense orange-red light beneath. The bottom third of the image is plain deep black background with no objects or details, left completely empty. Dramatic rim lighting on the barrel edges, ominous atmosphere of global economic crisis."
+    }
+  ]
+}

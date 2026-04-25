@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "project": "260413-hungary-orban-fall",
+    "titles": [
+      "\"물가 17.6%, 집값 290%\" 16년 독재가 하루아침에 무너진 이유",
+      "물가 17.6%, 이것이 독재자를 무너뜨린 방법",
+      "헝가리 물가 17.6%가 16년 독재 체제를 끝장낸 소름돋는 과정"
+    ],
+    "thumbnail_texts": [
+      "물가 17.6% / 집값 290% / 독재자 퇴출",
+      "16년 독재 붕괴 / 경제가 끝냈다",
+      "오르반 완패 / 물가의 역습"
+    ],
+    "image_concepts": {
+      "A": "오르반 충격 표정 + 경제 붕괴 그래프 (하락 화살표)",
+      "B": "투표함과 장바구니 오버레이 + 오르반 실루엣 소멸"
+    }
+  },
+  "thumbnails": [
+    {
+      "id": 1,
+      "type": "concept-a-photorealistic",
+      "concept_ko": "컨셉 A 실사. 상단 2/3에 오르반의 충격받은 표정 클로즈업, 배경에 빨간 하락 화살표와 물가 상승 그래프가 겹쳐진 시네마틱 장면. 하단 1/3은 완전히 비어있는 어두운 배경(텍스트는 후편집으로 삽입하므로 AI는 글자·숫자·타이포그래피를 절대 그리지 말 것). 상단 이미지는 경계선에서 잘리지 않도록 여유있게 배치.",
+      "prompt_en": "Photorealistic cinematic close-up of Viktor Orban (Hungarian Prime Minister) with a shocked, defeated expression, looking slightly downward. Behind him, a dramatic red downward arrow and economic decline graph overlay the dark navy background. Intense rim lighting separates his face from the moody backdrop, creating a sense of political downfall and economic crisis. Moody cinematic atmosphere with deep shadows. LAYOUT: all visual elements (face, graphs, arrows) concentrated in the upper two-thirds of the frame with clear margin from the boundary — nothing cropped or cut off at the 2/3 line. The bottom one-third of the frame is a completely plain solid dark background, 100% empty, no objects, no shadows, no glow, no gradient, no spillover from the upper area. STRICTLY NO TEXT: absolutely no letters, no words, no numbers, no typography, no captions, no placeholder text, no subtitles anywhere in the image — the bottom dark area is reserved for text that will be added later in post-production by the user, not by the AI."
+    },
+    {
+      "id": 2,
+      "type": "concept-a-anime",
+      "concept_ko": "컨셉 A 애니메. 상단 2/3에 오르반풍 캐릭터가 충격받은 표정으로 서 있고, 배경에 거대한 빨간 하락 화살표와 경제 그래프가 드라마틱하게 펼쳐진 장면. 하단 1/3은 완전히 비어있는 어두운 배경(텍스트는 후편집으로 삽입하므로 AI는 글자·숫자·타이포그래피를 절대 그리지 말 것). 상단 이미지는 경계선에서 잘리지 않도록 여유있게 배치.",
+      "prompt_en": "Anime-style dramatic illustration of a stern-faced European political leader resembling Viktor Orban with an exaggerated shocked expression. Behind him, a massive red downward arrow crashes through economic charts and graphs. Dark cinematic atmosphere with bold cel-shading, vivid red and orange accent colors against deep navy background. Intense dramatic perspective emphasizing political downfall. Tense, foreboding atmosphere. LAYOUT: all visual elements (character, arrows, graphs) concentrated in the upper two-thirds of the frame with clear margin from the boundary — nothing cropped or cut off at the 2/3 line. The bottom one-third of the frame is a completely plain solid dark background, 100% empty, no objects, no shadows, no glow, no gradient, no spillover from the upper area. STRICTLY NO TEXT: absolutely no letters, no words, no numbers, no typography, no captions, no placeholder text, no subtitles anywhere in the image — the bottom dark area is reserved for text that will be added later in post-production by the user, not by the AI."
+    },
+    {
+      "id": 3,
+      "type": "concept-b-hybrid",
+      "concept_ko": "컨셉 B 하이브리드. 상단 2/3에 투표함 위에 장바구니가 놓여있고, 오르반의 어두운 실루엣이 서서히 사라지는 구도. 회색에서 파랑으로 전환되는 그라디언트 배경. 하단 1/3은 완전히 비어있는 어두운 배경(텍스트는 후편집으로 삽입하므로 AI는 글자·숫자·타이포그래피를 절대 그리지 말 것). 상단 이미지는 경계선에서 잘리지 않도록 여유있게 배치.",
+      "prompt_en": "Hybrid digital art combining photorealistic and stylized elements. A ballot box in the center with a grocery shopping basket placed on top of it, symbolizing economy meeting democracy. In the background, a dark silhouette of Viktor Orban fading away into shadows. Color gradient transitioning from dark grey on the left to hopeful blue on the right. Green economic accent colors on the basket. Dramatic lighting with strong contrast between the fading figure and the illuminated ballot box. Cinematic moody atmosphere. LAYOUT: all visual elements (ballot box, basket, silhouette) concentrated in the upper two-thirds of the frame with clear margin from the boundary — nothing cropped or cut off at the 2/3 line. The bottom one-third of the frame is a completely plain solid dark background, 100% empty, no objects, no shadows, no glow, no gradient, no spillover from the upper area. STRICTLY NO TEXT: absolutely no letters, no words, no numbers, no typography, no captions, no placeholder text, no subtitles anywhere in the image — the bottom dark area is reserved for text that will be added later in post-production by the user, not by the AI."
+    }
+  ]
+}

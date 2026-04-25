@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "project": "peaceful-mind",
+    "titles": [
+      "\"그냥 성격이겠지\" 무서울 정도로 평온한 사람들의 뇌가 다른 단 한 가지",
+      "\"별 거 아니야\" 무서울 정도로 여유로운 사람들이 감정을 처리하는 법",
+      "\"그냥 성격이겠지\" 흔들리지 않는 사람들의 뇌에서 발견된 결정적 차이"
+    ],
+    "thumbnail_texts": [
+      "저 사람 왜 저래? + 평온한 사람의 비밀 + 뇌에서 발견된 + 결정적 차이",
+      "흔들리지 않는 사람 + 뇌의 비밀은 딱 하나 + 0.04초의 + 감정 스위치",
+      "별 거 아니야 + 평온한 사람이 + 감정을 처리하는 + 진짜 루틴"
+    ],
+    "image_concepts": {
+      "A": "따뜻한 카페에서 커피잔을 든 채 미소 짓는 평온한 인물 클로즈업으로 여유의 감정 시각화",
+      "B": "뇌 실루엣 안에서 좌측 빨간 경보기 ↔ 우측 민트빛 소방관이 진정시키는 Before/After 구성"
+    }
+  },
+  "thumbnails": [
+    {
+      "id": 1,
+      "type": "concept-a-photorealistic",
+      "concept_ko": "컨셉 A 실사. 상단 2/3에 따뜻한 카페에서 커피잔을 든 채 잔잔히 미소 짓는 매력적인 여성의 클로즈업. 눈빛은 평온하고 입가엔 은은한 여유. 파스텔 베이지·크림톤 인테리어와 황금빛 따뜻한 측면광, 뒤로는 부드러운 보케의 따뜻한 조명. 하단 1/3은 완전히 비어있는 어두운 배경(텍스트는 후편집으로 삽입하므로 AI는 글자·숫자·타이포그래피를 절대 그리지 말 것). 상단 이미지는 경계선에서 잘리지 않도록 여유있게 배치.",
+      "prompt_en": "Photorealistic cinematic close-up portrait of an attractive young woman with a warm likeable face, sitting in a cozy cafe, gently smiling while holding a warm coffee cup close to her chin. Soft pastel beige and cream-toned interior with gentle warm lighting casting a golden glow across her face. Her expression radiates deep inner calm and quiet contentment, partially revealed as if hiding a peaceful secret. The atmosphere feels inviting and serene, with soft bokeh of warm yellow fairy lights in the background. LAYOUT: all key visual elements (face, coffee cup, bokeh) concentrated in the upper two-thirds of the frame with clear margin from the boundary — nothing cropped or cut off at the 2/3 line. The bottom one-third of the frame is a completely plain solid dark background, 100% empty, no objects, no shadows, no glow, no gradient, no spillover from the upper area. STRICTLY NO TEXT: absolutely no letters, no words, no numbers, no typography, no captions, no placeholder text, no subtitles anywhere in the image — the bottom dark area is reserved for text that will be added later in post-production by the user, not by the AI."
+    },
+    {
+      "id": 2,
+      "type": "concept-b-anime",
+      "concept_ko": "컨셉 B 애니메. 상단 2/3에 투명하게 빛나는 뇌 실루엣이 좌우로 분할된 Before/After 구성. 좌측은 빨갛게 울리는 경보기와 격한 빨간 불꽃(파스텔 핑크 배경), 우측은 민트빛 뇌를 부드럽게 다독이는 애니메풍 소방관 캐릭터(민트·크림 톤). 하단 1/3은 완전히 비어있는 어두운 배경(텍스트는 후편집으로 삽입하므로 AI는 글자·숫자·타이포그래피를 절대 그리지 말 것). 상단 이미지는 경계선에서 잘리지 않도록 여유있게 배치.",
+      "prompt_en": "Anime-style illustration showing a transparent glowing brain silhouette split into two halves in a mysterious before-and-after composition. The left half features a dramatic red alarm bell ringing with agitated energy and warm red sparks against a soft pastel pink background. The right half shows a beautiful anime firefighter character with expressive eyes calmly soothing the brain into a serene mint-green glow with gentle pastel tones. Soft muted saturation with intriguing contrast between the two halves, creating a sense of curiosity and warmth. LAYOUT: all visual elements (brain, alarm, sparks, firefighter character, glow) concentrated in the upper two-thirds of the frame with clear margin from the boundary — nothing cropped or cut off at the 2/3 line. The bottom one-third of the frame is a completely plain solid dark background, 100% empty, no objects, no shadows, no glow, no gradient, no spillover from the upper area. STRICTLY NO TEXT: absolutely no letters, no words, no numbers, no typography, no captions, no placeholder text, no subtitles anywhere in the image — the bottom dark area is reserved for text that will be added later in post-production by the user, not by the AI."
+    },
+    {
+      "id": 3,
+      "type": "wildcard-hybrid",
+      "concept_ko": "와일드카드 하이브리드. 상단 2/3에 거대한 폭풍우의 고요한 눈(Eye of the Storm) 한가운데에 다리 접고 앉아있는 매력적인 인물. 외부는 회청색 혼돈의 구름이 소용돌이치지만 중심 버블은 파스텔 라벤더·크림 톤의 평온. 인물 주변에서 금빛 따뜻한 빛이 부드럽게 방사. 하단 1/3은 완전히 비어있는 어두운 배경(텍스트는 후편집으로 삽입하므로 AI는 글자·숫자·타이포그래피를 절대 그리지 말 것). 상단 이미지는 경계선에서 잘리지 않도록 여유있게 배치.",
+      "prompt_en": "Hybrid 3D-rendered surreal composition of an attractive person with a gentle serene expression sitting cross-legged inside the perfectly calm eye of a massive swirling storm. Soft pastel lavender and cream tones surround the figure in a bubble of warmth, while the outer storm churns in muted grey-blue with subtle curious energy. Warm golden light radiates softly from the figure, contrasting with the turbulent atmosphere beyond. Volumetric lighting with dreamlike soft focus, intriguing visual metaphor of inner peace amidst external chaos, gentle airy atmosphere throughout. LAYOUT: all visual elements (figure, storm eye, swirling clouds, golden light) concentrated in the upper two-thirds of the frame with clear margin from the boundary — nothing cropped or cut off at the 2/3 line. The bottom one-third of the frame is a completely plain solid dark background, 100% empty, no objects, no shadows, no glow, no gradient, no spillover from the upper area. STRICTLY NO TEXT: absolutely no letters, no words, no numbers, no typography, no captions, no placeholder text, no subtitles anywhere in the image — the bottom dark area is reserved for text that will be added later in post-production by the user, not by the AI."
+    },
+    {
+      "id": 4,
+      "type": "cozy-storybook",
+      "concept_ko": "포근한 동화책 수채화 스타일(지브리 감성). 상단 2/3 — 비 내리는 밤 작은 다락방 창가, 둥근 머리에 표정이 최소화된(작은 점 눈, 은은한 미소) 캐릭터가 살짝 좌측에 다리 접고 앉아 두 손을 무릎 위에 포갠 명상 포즈. 창밖엔 번개와 세찬 빗방울이지만 캐릭터 주변으로 부드러운 시안 글로우(평온)가 몸을 감싸고, 옆에는 살짝 떠 있는 작은 뇌 아이콘이 잔잔한 펄스로 빛남. 경보 벨·느낌표 같은 작은 감정 신호 실루엣들이 공중에 희미하게 떠 있지만 시안 글로우 바깥에서 조용히 흩어진다. 주변엔 따뜻한 김이 오르는 도자기 머그, 담요, 작은 스탠드 램프, 빗방울 맺힌 창틀 같은 lived-in 디테일 2~3개. 수채 텍스처의 파스텔(베이지, 더스티 블루, 세이지 그린, 웜 브라운, 크림), 손그림 잉크 아웃라인, 소프트 셰이딩. '바깥은 폭풍, 안은 평온' 분위기. 하단 1/3은 완전히 비어있는 어두운 배경(텍스트는 후편집으로 삽입하므로 AI는 글자·숫자·타이포그래피를 절대 그리지 말 것). 상단 이미지는 경계선에서 잘리지 않도록 여유있게 배치.",
+      "prompt_en": "[STYLE — FIXED] Cozy storybook illustration style, soft watercolor and pastel textures, warm muted color palette (beige, dusty blue, sage green, warm brown, cream). Simple round-headed character with minimal facial features (small dot eyes, subtle gentle expressions). Hand-drawn ink outlines with soft shading. Ghibli-inspired atmosphere with cinematic lighting and lived-in environmental details. Consistent character design across all scenes. [SCENE] A round-headed character sits slightly left of center in a cross-legged meditation pose, hands softly folded on the lap, with a gentle half-smile and eyes nearly closed — serene and unshaken. A soft cyan symbolic glow for calm wraps the character's body, and a small stylized brain icon floats beside the shoulder pulsing gently. In the surrounding air, faint ghost-silhouettes of an alarm bell and exclamation marks drift at the outer edges but dissolve quietly outside the cyan glow, showing that emotional alarms simply pass by. [BACKGROUND] A small cozy attic room by a rain-streaked window at nighttime, with distant lightning softly flickering outside and heavy rain beyond the glass, while inside everything is hushed and warm. Lighting is gentle warm lamplight from a small table lamp on the right. Include 2-3 contextual props: a ceramic mug with soft steam rising beside the character, a folded blanket nearby, and raindrops collected on the windowpane. The atmosphere is peaceful, contemplative, quietly powerful — storm outside, calm inside. [COMPOSITION] Character slightly left of center in the upper two-thirds of the frame, gentle negative space balanced around the figure. LAYOUT: all visual elements (character, glow, brain icon, alarm silhouettes, mug, blanket, lamp, window) concentrated in the upper two-thirds of the frame with clear margin from the boundary — nothing cropped or cut off at the 2/3 line. The bottom one-third of the frame is a completely plain solid dark background, 100% empty, no objects, no shadows, no glow, no gradient, no spillover from the upper area. [RESTRICTION — FIXED] No text, no letters, no numbers, no watermarks, no logos, no signage. STRICTLY NO TEXT: absolutely no letters, no words, no numbers, no typography, no captions, no placeholder text, no subtitles anywhere in the image — the bottom dark area is reserved for text that will be added later in post-production by the user, not by the AI."
+    }
+  ]
+}

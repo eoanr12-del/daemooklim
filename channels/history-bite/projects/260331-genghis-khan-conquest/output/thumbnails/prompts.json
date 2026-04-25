@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "project": "genghis-khan-conquest",
+    "titles": [
+      "'복수는 나의 것!' 10만 기병으로 세계를 불태운 칭기즈칸, 정복 뒤에 숨겨진 진짜 이야기",
+      "역사 이래 최강의 군대, 10만이 4천만을 이긴 소름돋는 비밀",
+      "칭기즈칸이 지나간 자리, 4천만 명이 사라졌다"
+    ],
+    "thumbnail_texts": [
+      "몽골제국 탄생, 4천만의 비명 / 칭기즈칸의 복수",
+      "10만 vs 세계 / 복수가 제국이 되기까지",
+      "정복 이전 / 정복 이후 / 백성들은 모두 죽었다"
+    ],
+    "image_concepts": {
+      "A": "전쟁과 폐허의 대비 — 좌: 칭기즈칸 기마상 위엄, 우: 불타는 도시와 쓰러진 백성들",
+      "B": "피의 영토 확장 — 몽골 초원에서 피처럼 붉게 퍼지는 유라시아 대륙 지도"
+    }
+  },
+  "thumbnails": [
+    {
+      "id": 1,
+      "type": "concept-a-photorealistic",
+      "concept_ko": "컨셉 A 실사. 상단 2/3에 좌측에 황금빛 갑옷을 입은 칭기즈칸의 위엄 있는 기마상, 우측에 화염에 휩싸인 중앙아시아 도시의 폐허. 좌우 분할 대비 구도. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Photorealistic cinematic split composition. Left side: Genghis Khan in golden Mongol armor on horseback, imposing and stoic, bathed in warm golden-brown light with dust particles in the air. Right side: a burning Central Asian walled city engulfed in flames and black smoke, silhouettes of fallen people on the ground. Sharp contrast between the golden triumphant left and the fiery destructive red-orange right. Desaturated monochrome base with selective crimson and gold accent colors. High contrast dramatic lighting. All key visual elements concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay."
+    },
+    {
+      "id": 2,
+      "type": "concept-a-anime",
+      "concept_ko": "컨셉 A 애니메. 상단 2/3에 같은 좌우 대비를 애니메 스타일로 — 칭기즈칸 기마 위엄 vs 불타는 도시. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Stylized anime-style illustration with bold ink outlines and cel-shaded lighting. Split composition: left side shows Genghis Khan in ornate Mongol armor mounted on a powerful horse, rendered in warm golden tones with a commanding expression. Right side depicts a burning medieval city with dramatic orange flames and billowing black smoke, small silhouette figures fleeing below. Monochrome palette with selective gold and crimson accents. Intense dramatic atmosphere with exaggerated perspective. All key visual elements concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay."
+    },
+    {
+      "id": 3,
+      "type": "wildcard",
+      "concept_ko": "와일드카드. 상단 2/3에 칭기즈칸의 냉정한 정면 클로즈업 초상, 그의 눈에 불타는 도시가 반사되는 이중노출 효과. 모노톤 배경에 붉은 포인트. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Photorealistic extreme close-up portrait of Genghis Khan with a cold, calculating expression, wearing traditional Mongol fur-trimmed helmet. Double exposure effect showing a burning city reflected in his intense dark eyes. Desaturated monochrome color grading with selective deep crimson highlights on the fire reflections. Atmospheric haze and ash particles floating in the air. Dramatic rim lighting creating sharp contrast against the dark background. Mysterious and ominous atmosphere. All key visual elements concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay."
+    }
+  ]
+}

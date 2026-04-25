@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "project": "260411-family-karma",
+    "titles": [
+      "종처럼 30년 부려먹고 버린 며느리가 폐광촌에서 천억 산삼을 찾자, 비웃으러 온 시어머니가 무릎 꿇고 경악하는데..",
+      "30년 머슴살이 시킨 며느리를 폐광촌에 내쫓았더니, 1년 후 천억짜리 비밀이 터졌다",
+      "\"끝이 딱 거지네\" 30년 부려먹은 며느리를 죽은 땅에 버렸더니, 천억 산삼 밭 주인이 되어 돌아왔다"
+    ],
+    "thumbnail_texts": [
+      "30년 종처럼 부려먹은 며느리, / 폐광촌에서 쫓겨난 뒤 벌어진 일 / \"이년이 감히!\"",
+      "폐광촌에 버린 며느리, / 천억 산삼 밭 주인이 되자.. / \"거짓꼴이네~\"",
+      "30년 참은 며느리의 역전, / 시어머니가 무릎 꿇고 경악하는데.. / \"끝났다\""
+    ],
+    "image_concepts": {
+      "A": "피해자 vs 가해자 대비 — 남루한 작업복 며느리 실루엣 vs 명품 차림 시어머니 실루엣, 폐광촌 배경",
+      "B": "천종산삼 발견의 극적 순간 — 어두운 돌무더기 사이 빛나는 산삼, 중년 여성 실루엣 뒷모습"
+    }
+  },
+  "thumbnails": [
+    {
+      "id": 1,
+      "type": "concept-a-photorealistic",
+      "concept_ko": "컨셉 A 실사. 폐광촌 배경에서 남루한 작업복을 입은 중년 여성 실루엣(좌)과 검은 벤츠 옆 명품 차림 시어머니 실루엣(우)의 극적 대비.",
+      "prompt_en": "Cinematic photorealistic split composition. Left side: dark silhouette of a middle-aged Korean woman in worn dusty work clothes holding a shovel, standing in a desolate abandoned mining town with grey-brown rocky terrain and dust particles floating in dim light. Right side: dark silhouette of an elderly Korean woman in an expensive fur coat and luxury accessories, standing next to a black Mercedes-Benz sedan on a dark urban road. Dramatic contrast between the two figures, intense side lighting creating long shadows. Dark cinematic atmosphere with deep shadows and moody lighting. The mining town side has dusty yellow-brown tones while the wealthy side has cold dark blue-grey tones. Ominous tension between the two worlds."
+    },
+    {
+      "id": 2,
+      "type": "concept-b-anime",
+      "concept_ko": "컨셉 B 애니메. 어두운 폐광촌 돌무더기 사이에서 황금빛으로 빛나는 산삼 뿌리를 발견한 중년 여성의 뒷모습 실루엣.",
+      "prompt_en": "Stylized anime illustration with dark cinematic atmosphere. A dark silhouette of a middle-aged Korean woman seen from behind, standing among grey-brown rocky debris of an abandoned mining town. Between the cracked rocks at her feet, a cluster of wild ginseng roots glows with intense golden-orange light, casting warm rays upward that illuminate the woman's silhouette from below. The background is deep shadow with muted grey and brown tones of desolate rocky terrain. A single beam of pale moonlight falls from above. The golden glow of the ginseng creates a mysterious, almost sacred atmosphere against the dark lifeless landscape. Anime cel-shading with bold outlines, dramatic contrast between the golden light source and the surrounding darkness."
+    },
+    {
+      "id": 3,
+      "type": "wildcard",
+      "concept_ko": "와일드카드. 갈라진 폐광촌 돌산 틈에서 황금빛이 폭발적으로 뿜어나오고, 그 앞에 선 남루한 여성 실루엣. 뒤에서 경악하는 명품 차림 노부인 실루엣.",
+      "prompt_en": "Dark dramatic digital art with cinematic lighting. A massive cracked rocky mountain in an abandoned mining town splits open, revealing an explosion of golden-orange light bursting through the fissures. In the foreground, a dark backlit silhouette of a middle-aged woman in simple worn clothes faces the glowing mountain. Behind her in the distance, a smaller silhouette of an elderly woman in fur coat recoils in shock, hands raised. The scene is bathed in contrast between the cold grey-brown desolate mining landscape and the warm supernatural golden glow emanating from within the mountain. Dust particles catch the light, creating an ethereal atmosphere of revelation and power reversal. Deep shadows, high contrast, ominous yet triumphant mood."
+    }
+  ]
+}

@@ -45,7 +45,7 @@ creative-strategy.md Phase 5에서 참조하는 **프롬프트 작성 규칙**.
 3. **비실존 인물 외모**: 특정 실존 인물이 아닌 일반 캐릭터/인물이 등장할 경우, `"attractive, appealing appearance, likeable face"` 등을 추가하여 호감형 외모로 생성한다. 실사 스타일이면 `"attractive young woman/man with a warm likeable face"`, 애니메 스타일이면 `"beautiful/handsome anime character with expressive eyes"` 형태로.
 4. **3~5문장**: 구체적이고 생생하게, 하지만 과도하게 길지 않게
 5. **고유명사 보존**: concept_ko의 브랜드명, 제품명, 고유명사는 영어 프롬프트에 반드시 그대로 보존한다. 예: "HBM4 칩" → "Samsung HBM4 memory chip" (단순 "semiconductor chip"으로 일반화 금지)
-6. **스타일 명시**: 배분된 아트 스타일을 프롬프트 앞부분에 명시. 실사: `"photorealistic"`, `"cinematic"`. 애니메: `"anime-style illustration"`, `"vibrant anime art"`, `"stylized digital illustration"`. 커스텀 스타일이면 해당 스타일 키워드 사용.
+6. **스타일 명시**: 배분된 아트 스타일을 프롬프트 앞부분에 명시. 실사: `"photorealistic"`, `"cinematic"`. 애니메: `"anime-style illustration"`, `"vibrant anime art"`, `"stylized digital illustration"`. **2d-illustration**: `"2D digital illustration, detailed line art, clean outlines, cel-shaded, flat color palette, muted tones, desaturated colors, matte finish, subtle paper texture, graphic novel style, strong shadows, minimal rendering"` (그래픽 노블/에디토리얼 일러스트 톤 — 채도 낮은 플랫 컬러 + 강한 라인 + 은은한 종이 질감). 커스텀 스타일이면 해당 스타일 키워드 사용.
 7. **구도 명시**: 좌우 배치, 중앙 집중, 원근 등 구도를 구체적으로 서술
 8. **모바일 주목성**: 피사체를 크고 명확하게 묘사하여 모바일 소형 썸네일에서도 한눈에 알아볼 수 있도록 한다
 9. **국기·상징물 주의**: 일본 국기는 반드시 일반 국기(日章旗, 흰 바탕에 빨간 원)만 사용한다. 전범기(旭日旗, 방사형 광선)는 절대 금지. 프롬프트에 `"Japanese national flag (white flag with red circle)"` 형태로 명시하고, `"rising sun"`, `"rays"`, `"imperial"` 등 전범기를 연상시키는 표현을 사용하지 않는다.
@@ -88,13 +88,14 @@ creative-strategy.md Phase 5에서 참조하는 **프롬프트 작성 규칙**.
 | 값 | 구도 규칙 |
 |----|----------|
 | `bottom-half` | **상단 1/2에 핵심 피사체를 좌우 꽉 차게** 배치. **하단 1/2는 단순 배경만** — 인물 얼굴, 로고, 핵심 오브젝트 등 중요한 요소가 하단에 오면 안 됨. **(기본값)** |
+| `bottom-third` | **캔버스 전체(1280x720, 16:9)를 한 장의 자연스러운 그림으로 끊김 없이 채움** (강제로 비워두는 영역 없음). **핵심 피사체(인물 얼굴, 시선 끌기 요소, 고대비·중요 디테일)는 상단 2/3에 우선 배치**. **하단 1/3은 같은 장면의 자연스러운 연장** — 배경의 그라데이션, 안개, 인물 어깨 라인, 책상/풀밭 등 차분한 톤으로 채워서 자막을 후편집으로 얹기 좋게 함. **자막 영역엔 강한 디테일·인물 얼굴·고대비 요소를 두지 말 것**. 자막 배경 처리(반투명 박스/그라데이션/글자만)는 후편집에서 자유롭게 선택. AI는 placeholder 텍스트를 그리지 않는다. |
 | `full` | 전체 프레임을 이미지로 채움. 텍스트 공간 확보 불필요. 피사체를 프레임 전체에 배치. |
 | `left-right` | 핵심 피사체를 한쪽(좌 또는 우)에 배치. 반대쪽은 단순 배경으로 텍스트 공간 확보. |
 
 > **boilerplate 불포함**: 아래는 `generate_thumbnails.py`가 `text_space` 설정에 따라 자동 추가하므로 prompt_en에 포함하지 않는다:
 > 1. 16:9 비율 (`wide 16:9 aspect ratio, YouTube thumbnail composition`)
 > 2. 구도 규칙 (`text_space`에 해당하는 composition 지시문)
-> 3. 텍스트 금지 (`no text, no letters, no words, no numbers, no watermark`)
+> 3. 텍스트 금지 (`STRICTLY NO TEXT: ... no placeholder text, no subtitles, no watermark`)
 
 ### 인물 표현 (`face_style`)
 

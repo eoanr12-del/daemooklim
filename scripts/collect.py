@@ -18,6 +18,20 @@ import shutil
 import subprocess
 import sys
 
+# Windows cp949 stdout 인코딩 문제 방지
+if sys.platform == "win32" and hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
+# venv 내 yt-dlp 경로를 자동 탐지
+_VENV_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".venv")
+if sys.platform == "win32":
+    _YTDLP = os.path.join(_VENV_DIR, "Scripts", "yt-dlp.exe")
+else:
+    _YTDLP = os.path.join(_VENV_DIR, "bin", "yt-dlp")
+if not os.path.isfile(_YTDLP):
+    _YTDLP = "yt-dlp"  # fallback to PATH
+
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 from project_resolver import resolve_project_dir
 
@@ -36,7 +50,7 @@ def next_ref_id(ref_dir):
 def run_ytdlp(url, output_dir):
     """yt-dlp로 영상 메타데이터 + 썸네일 + 자막을 가져온다."""
     cmd = [
-        "yt-dlp",
+        _YTDLP,
         "--skip-download",
         "--write-thumbnail",
         "--write-auto-sub",
@@ -56,7 +70,7 @@ def run_ytdlp(url, output_dir):
 def fetch_comments(url):
     """yt-dlp로 댓글 TOP 10만 별도로 가져온다."""
     cmd = [
-        "yt-dlp",
+        _YTDLP,
         "--skip-download",
         "--write-comments",
         "--no-write-info-json",
@@ -189,7 +203,7 @@ def collect(url, ref_dir, ref_id):
     cleanup(output_dir)
 
     rel_path = os.path.relpath(output_dir, ROOT_DIR)
-    print(f"\n✓ 완료! → {rel_path}/")
+    print(f"\n[OK] 완료! -> {rel_path}/")
     for f_name in sorted(os.listdir(output_dir)):
         size = os.path.getsize(os.path.join(output_dir, f_name))
         print(f"  {f_name} ({size:,} bytes)")

@@ -1,7 +1,28 @@
+# Python
 __pycache__/
 *.py[cod]
 .venv/
+
+# 환경/시크릿
 .env
-channels/*/projects/
-channels/*/projects/_archive/
+.env.*
+*.key
+*.pem
+
+# OS
 .DS_Store
+Thumbs.db
+
+# 임시 작업 파일
+_temp_*
+
+# 개인 거래/문서 (절대 추적 X)
+bank_*
+bank_statement.*
+
+# Claude Code 로컬 설정
+.claude/settings.local.json
+
+# 프로젝트 작업물 (필요 시 줄별로 주석 해제)
+channels/*/projects/_archive/
+# channels/*/projects/   # ← 다른 기기에서 작업 이어가려면 이 줄을 주석 처리(현재처럼) 두지 말고 제거하면 작업물도 함께 push됨

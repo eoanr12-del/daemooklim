@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "project": "april-tariff-crisis",
+    "titles": [
+      "\"관세 25%에 전쟁까지\" 기름값, 환율, 물가, 반도체...4월 한국 경제에 벌어질 일들",
+      "4월 관세 폭탄, 전쟁에 환율 1500까지...당신의 월급이 녹는 진짜 이유",
+      "\"이번엔 진짜 다릅니다\" 전쟁·관세·환율, 4월 한국 경제 3중 위기의 실체"
+    ],
+    "thumbnail_texts": [
+      "4월, 관세+전쟁 / 한국 경제 이중 압박 시작된다 / 진짜 위기",
+      "관세 25% + 유가 51% 급등 / 4월, 돈이 사라진다 / 이미 시작됐다",
+      "전쟁+관세 이중 폭탄 / 아무도 말 안 하는 4월 시나리오 / 각자도생"
+    ],
+    "image_concepts": {
+      "A": "미국 vs 한국 vs 중동 — 삼각 압박 구도, 3캐릭터 충돌",
+      "B": "균열 가는 한반도 — 양쪽에서 관세·유가 화살표가 꽂히는 이미지"
+    }
+  },
+  "thumbnails": [
+    {
+      "id": 1,
+      "type": "concept-a-photorealistic",
+      "concept_ko": "컨셉 A 실사. 어두운 연기 배경 속 미국(성조기 수트, 관세 서류), 한국(태극기 넥타이, 당혹한 표정), 중동(케피예, 불타는 석유 배럴) 3인이 삼각 대치하는 시네마틱 장면. 상단 2/3에 이미지 집중, 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Cinematic photorealistic scene of three figures in a tense triangular standoff against a dark smoky background with orange fire glow. Left: an imposing American figure in a stars-and-stripes suit holding a document labeled 'TARIFF 25%'. Center: an attractive South Korean businessman with a Taegeukgi-patterned tie, visibly distressed expression, caught between the two sides. Right: a Middle Eastern figure in traditional keffiyeh standing beside a flaming oil barrel. Dramatic rim lighting separates each figure from the dark background, with orange-red fire reflections and thick smoke creating an ominous atmosphere of economic crisis. All key visual elements are concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay."
+    },
+    {
+      "id": 2,
+      "type": "concept-a-anime",
+      "concept_ko": "컨셉 A 애니메. 같은 삼각 대치 구도를 일본 애니메 스타일로 표현. 과장된 표정과 역동적 구도. 상단 2/3에 이미지 집중, 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Vibrant anime-style illustration of three characters in an intense triangular confrontation. Left: a powerful American character in a bold stars-and-stripes outfit, holding a glowing red document marked 'TARIFF', with a confident smirk. Center: an attractive young Korean character with expressive worried eyes, wearing a business suit with a small Taegeukgi pin, arms raised defensively as pressure comes from both sides. Right: a mysterious Middle Eastern character with a dramatic keffiyeh, standing next to an explosively burning oil barrel with stylized flames. Dark stormy background with speed lines and dramatic manga-style lighting, high contrast cel-shading with vivid red and orange accents against deep shadows. All key visual elements are concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay."
+    },
+    {
+      "id": 3,
+      "type": "concept-a-hybrid",
+      "concept_ko": "컨셉 A 하이브리드. 실사 배경(연기+화염) 위에 3D 렌더링 캐릭터를 합성한 스타일. 상단 2/3에 이미지 집중, 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Hybrid 3D-render and photorealistic composite scene showing three stylized characters in a triangular economic standoff. Left: a large imposing American figure rendered in semi-realistic 3D style, wearing a dark suit with American flag cufflinks, holding tariff documents with red '25%' stamp. Center: an attractive Korean figure in a modern business suit, looking anxious and pressured, smaller in scale between the two threatening figures. Right: a Middle Eastern figure with traditional headwear next to a massive burning oil barrel with thick black smoke. Background combines photorealistic dark smoke and fire with 3D-rendered dramatic volumetric lighting in deep orange and crimson tones. All key visual elements are concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay."
+    }
+  ]
+}

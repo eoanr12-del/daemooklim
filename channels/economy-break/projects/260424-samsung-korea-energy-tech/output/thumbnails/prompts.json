@@ -1,0 +1,35 @@
+{
+  "project": "260424-samsung-korea-energy-tech",
+  "channel": "economy-break",
+  "title": "\"기름값, 곧 반값 됩니다\" 호르무즈 봉쇄 한복판에서 삼성이 조용히 뒤집은 '이 판'",
+  "count": 4,
+  "text_space": "bottom-third",
+  "emotions": ["shock", "tension"],
+  "color_palette": "dark",
+  "prompts": [
+    {
+      "id": "A-photorealistic",
+      "concept": "Cracking Gas Station vs Green Hydrogen Tank",
+      "style": "photorealistic",
+      "prompt": "Photorealistic cinematic split composition with dark moody atmosphere, dramatic contrast, deep shadows. Left half: a towering massive green hydrogen storage tank glowing with cool teal light, marked with H2 symbol, sleek Samsung Engineering industrial aesthetic, futuristic desert sunset in background behind it. Right half: an old yellow Korean gas station price sign displaying '2000' gasoline price, the sign is violently cracking and splitting down the middle with red glowing fracture lines, shards of metal falling, visibly breaking in half to symbolize collapse of oil economy. Dramatic side lighting, cinematic film grain, ultra detailed. The top 60 percent holds the visual; bottom third is empty clean dark negative space for overlay text. No text, no letters, no words, no logos visible in the image. 8k ARRI Alexa shot, shallow depth of field."
+    },
+    {
+      "id": "A-anime",
+      "concept": "Cracking Gas Station vs Green Hydrogen Tank",
+      "style": "anime",
+      "prompt": "Vibrant anime-style illustration, dramatic cinematic split composition, stylized digital illustration with dark moody palette. Left half: a colossal futuristic green hydrogen tower with glowing teal energy lines radiating outward, the H2 molecule symbol shining at its core, Ghibli-meets-Shinkai energy, silhouette of Oman desert sand dunes glowing gold behind. Right half: a nostalgic Korean gas station sign showing '2000' gasoline price is shattering explosively with jagged red energy cracks, sparks flying, pieces dissolving into particles, conveying the collapse of the oil era. Dynamic manga turning-point composition. Top 60 percent holds the visual, bottom third kept as clean empty space for overlay text. No text, no letters, no words, no logos in the image."
+    },
+    {
+      "id": "B-hybrid",
+      "concept": "Executive Confidence + Young Driver Relief",
+      "style": "hybrid",
+      "prompt": "Hybrid photorealistic-illustration cinematic portrait composition with dark moody atmosphere and dramatic rim lighting. Left half: Lee Jae-yong (Samsung Electronics chairman, middle-aged Korean man with short hair, wearing a dark navy suit) stands with a confident calm faint smile, extreme close-up from chest up, slight dramatic lighting on face. Right half: an attractive young Korean office worker in his early 30s wearing a modern business-casual shirt, standing at a futuristic hydrogen refueling station, holding a sleek green H2 refueling nozzle, smiling with warm likeable face looking at the camera with relief and hope. Behind both figures a subtle backdrop of glowing H2 tank silhouettes in teal light. Deep cinematic shadows, dark navy background with teal green accents. Top 60 percent holds the visual; bottom third kept empty dark for overlay text. No text, no letters, no words, no logos visible in the image. 8k ultra detailed."
+    },
+    {
+      "id": "Wildcard-cozy",
+      "concept": "Cozy Storybook — Oman Desert Hydrogen Dawn",
+      "style": "cozy-storybook",
+      "prompt": "Ghibli-style warm watercolor storybook illustration with soft hand-painted brushstrokes, cozy nostalgic atmosphere but adapted to a darker moody color palette dominated by deep navy and teal accents. A vast Omani desert at dawn, golden early light breaking over rolling sand dunes, a small silhouetted Korean engineer in hardhat stands in the foreground looking out at towering futuristic hydrogen plant facilities rising from the desert floor in the middle distance, surrounded by glowing teal H2 tanks and elegant white wind turbines. Gentle aurora-like energy streams flow up from the plants into a dark indigo sky filled with stars. Dreamy but solemn, conveying rebirth of energy era, emotional and hopeful. Deep navy and cool teal dominant palette with warm golden light at the horizon. Top 60 percent holds the artwork; bottom third kept as clean empty space for overlay text. No text, no letters, no words, no logos in the image."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "project": "gobu-conflict",
+    "titles": [
+      "30년간 찬밥 먹으며 버텼던 며느리, 시어머니가 숨긴 진실을 알게 된 아들은 무릎 꿇고 오열했다 ㅣ감동사연ㅣ오디오북",
+      "\"엄마 제발 일어나요\" 시어머니에게 30년간 찬밥만 먹던 며느리의 진실이 밝혀지자, 아들은 무릎 꿇고 오열했다 ㅣ감동사연ㅣ오디오북",
+      "시어머니에게 30년간 학대받으며 참았던 며느리, 아들이 몰래 찾아가 목격한 진실에 오열하고 말았다 ㅣ감동사연ㅣ오디오북"
+    ],
+    "thumbnail_texts": [
+      "30년간 찬밥만 먹은 며느리 / 시험하려 숨어서 지켜봤더니 / 아들이 목격한 진실에 / 무릎 꿇고 오열",
+      "\"엄마 제발 일어나요\" / 30년을 참아온 이유 / 며느리의 마지막 선택",
+      "시어머니가 30년간 숨긴 것 / 찬밥 vs 고기 듬뿍 / 진실을 안 아들의 오열"
+    ],
+    "image_concepts": {
+      "A": "A vs B 대비 — 며느리와 아들의 감정 대비, 재래시장 골목 배경",
+      "B": "인물 실루엣 — 어둠 속 며느리의 뒷모습, 찬밥에 물을 말아 먹는 장면"
+    }
+  },
+  "thumbnails": [
+    {
+      "id": 1,
+      "type": "concept-a-photorealistic",
+      "concept_ko": "컨셉 A 실사. 좌측에 낡은 앞치마를 두른 중년 여성이 고개를 숙이고 그릇을 들고 있고, 우측에 정장 차림의 남성이 손으로 입을 막으며 오열 직전. 채도 낮은 재래시장 골목 배경. 상단 2/3에 이미지 집중, 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Dark cinematic photograph of two figures in a dimly lit traditional Korean market alley. On the left, an attractive middle-aged Korean woman in a worn old apron, head bowed, holding a simple rice bowl with a weary but dignified expression. On the right, a well-dressed Korean man in his 30s covering his mouth with trembling hands, eyes glistening with tears, face contorted in anguish. Deep shadows with dramatic contrast, moody desaturated color palette with muted earth tones. Mysterious atmospheric lighting from above casting long shadows, creating a tense emotional scene. All key visual elements are concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay."
+    },
+    {
+      "id": 2,
+      "type": "concept-b-anime",
+      "concept_ko": "컨셉 B 애니메. 어두운 부엌에서 혼자 찬밥에 물을 말아 먹는 중년 여성의 실루엣. 창문으로 들어오는 희미한 달빛이 유일한 광원. 바닥에 구멍 뚫린 낡은 신발. 상단 2/3에 이미지 집중, 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Anime-style illustration with dark cinematic atmosphere. A silhouette of an attractive middle-aged Korean woman sitting alone in a dark kitchen, eating cold rice with water from a simple bowl. Faint moonlight streaming through a small window is the only light source, casting a cold blue-white glow on her back. On the floor nearby, a pair of worn-out shoes with visible holes. Deep shadows dominate the scene, navy-blue and indigo tones with the cold moonlight as the sole point of contrast. Stylized cel-shaded art with expressive linework emphasizing loneliness and quiet suffering. All key visual elements are concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay."
+    },
+    {
+      "id": 3,
+      "type": "wildcard",
+      "concept_ko": "와일드카드. 어둠 속에서 낡은 밥그릇과 고기가 듬뿍 담긴 밥그릇이 나란히 놓여 있는 클로즈업. 찬밥 vs 고기 듬뿍의 극적 대비. 상단 2/3에 이미지 집중, 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Dark cinematic close-up photograph of two Korean rice bowls side by side on a worn wooden table. The left bowl contains plain cold leftover rice with water, looking meager and sad. The right bowl is overflowing with generous portions of braised meat, steaming and richly colored. Dramatic spotlight illuminates both bowls from above against a deep dark background, creating extreme contrast between poverty and abundance. Moody atmospheric lighting with deep shadows, tension-filled composition suggesting inequality and hidden sacrifice. All key visual elements are concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay."
+    }
+  ]
+}

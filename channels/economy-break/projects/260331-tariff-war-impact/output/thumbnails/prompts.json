@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "project": "260331-tariff-war-impact",
+    "titles": [
+      "\"한국 원유 우리가 줄게!\" 러시아와 UAE가 한국에 쩔쩔 매는 소름돋는 이유 | 호르무즈 사태",
+      "\"제발 우리 기름 좀 써줘\" 산유국들이 한국 앞에 줄 서는 진짜 이유 | 에너지 전쟁",
+      "러시아도 UAE도 한국 없이는 못 판다, 기술이 자원을 이긴 순간 | 중동 위기"
+    ],
+    "thumbnail_texts": [
+      "러시아 기름도 좋은데... + 산유국이 한국에 줄 섰다? + 원유 퍼주는 소름돋는 이유",
+      "기술 없으면 자원도 쓸모없다 + 러시아·UAE가 무릎 꿇은 이유",
+      "92조원 거래의 비밀 + 왜 산유국이 한국에 원유를 퍼줄까"
+    ],
+    "image_concepts": {
+      "A": "푸틴 + 쇄빙 LNG선 병치 — 강대국 굴욕, 인물 감정 + 상징물 조합",
+      "B": "천궁2 미사일 발사 + UAE 사막 배경 — 스케일 대비, 긴장감"
+    }
+  },
+  "thumbnails": [
+    {
+      "id": 1,
+      "type": "concept-a-photorealistic",
+      "concept_ko": "컨셉 A 실사. 상단 2/3에 좌측에 거대한 쇄빙 LNG 운반선, 우측에 Vladimir Putin의 당혹한 표정 클로즈업. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Dark cinematic photograph of a massive Arctic LNG icebreaking carrier ship on the left side, towering and impressive with frozen ice chunks around it. On the right side, a close-up of Vladimir Putin (President of Russia) with a distressed, defeated expression, looking away from the ship. Deep shadows with dramatic contrast, cold blue-grey color palette with selective warm amber accent lighting on the ship's hull. Ominous atmosphere of a superpower humbled by technological dependence. All key visual elements concentrated in the upper two-thirds of the frame. The bottom third is plain dark background with no objects, reserved for text overlay."
+    },
+    {
+      "id": 2,
+      "type": "concept-b-anime",
+      "concept_ko": "컨셉 B 애니메. 상단 2/3에 사막 한가운데서 천궁2 미사일이 발사되는 역동적 장면. 불꽃 궤적이 하늘을 가르며 상승. 하단 1/3은 어두운 배경만.",
+      "prompt_en": "Vibrant anime-style illustration of a Cheongung-2 (M-SAM) missile defense system launching in a dramatic desert landscape. The missile streaks upward with an exaggerated fiery trail cutting through a dark twilight sky, creating vivid orange-red light against deep indigo clouds. Bold ink outlines and cel-shaded dramatic lighting. Desert sand dunes and distant UAE-style city skyline silhouettes in the background. Intense atmosphere of military precision and technological power. All key visual elements concentrated in the upper two-thirds. The bottom third is plain dark background with no objects, reserved for text overlay."
+    },
+    {
+      "id": 3,
+      "type": "wildcard",
+      "concept_ko": "와일드카드. 상단 2/3에 거대한 원유 배럴이 한반도 지도 위에 놓여있고, 러시아·UAE 방향에서 유조선들이 화살표처럼 한국을 향해 몰려오는 구도. 하단 1/3은 어두운 배경만.",
+      "prompt_en": "Dark cinematic composite image of a massive oversized oil barrel placed on top of a glowing Korean peninsula map in the center. From both sides, multiple oil tanker ships converge toward Korea — from the left (Russia direction) through icy waters, from the right (UAE direction) through warm desert-toned seas. Dramatic arrow-like formations of ships pointing inward toward Korea. Deep dark background with the Korean peninsula glowing in warm amber-gold as the focal point. Ominous yet triumphant atmosphere suggesting Korea as the unexpected center of energy geopolitics. All key visual elements concentrated in the upper two-thirds. The bottom third is plain dark background with no objects, reserved for text overlay."
+    }
+  ]
+}

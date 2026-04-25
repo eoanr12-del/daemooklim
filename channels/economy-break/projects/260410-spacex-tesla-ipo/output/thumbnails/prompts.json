@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "project": "260410-spacex-tesla-ipo",
+    "titles": [
+      "\"나 몰래 투자됐다고?\" 스페이스X 상장 전, 테슬라 주주가 반드시 알아야 할 구조",
+      "테슬라 주주는 이미 스페이스X 주주입니다, 자기도 모르게",
+      "스페이스X 상장이 테슬라 주주에게 독이 되는 구조, 아무도 안 알려줍니다"
+    ],
+    "thumbnail_texts": [
+      "스페이스X 상장 전 + 나 몰래 투자됐다고?",
+      "자기도 모르게 주주? + 테슬라의 숨겨진 구조",
+      "테슬라 주주 비상 + 이 구조 모르면 당합니다"
+    ],
+    "image_concepts": {
+      "A": "지분 연결 그물망 — 테슬라↔SpaceX 로고 사이 머스크 중앙, 빨간 사슬로 연결",
+      "B": "균열 가는 테슬라 — T 로고에 균열, 틈 사이로 SpaceX 로켓"
+    }
+  },
+  "thumbnails": [
+    {
+      "id": 1,
+      "type": "concept-a-photorealistic",
+      "concept_ko": "컨셉 A 실사. 상단 2/3에 좌측 테슬라 T 로고, 우측 SpaceX 로고, 중앙에 Elon Musk 정면 클로즈업. 두 로고를 잇는 빨간 사슬/실 이미지. 어두운 블루-블랙 배경. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Dark cinematic photograph with dramatic contrast. On the left, a large glowing red Tesla 'T' logo. On the right, a SpaceX logo of equal size. In the center, a close-up of Elon Musk (CEO of Tesla and SpaceX) with a calculating, intense expression looking directly at the viewer. Thick red chains or threads connect the two logos through Musk, visualizing the entangled ownership structure. Deep blue-black background with selective red accent lighting on the chains and logo edges. Ominous atmosphere of hidden connections and corporate intrigue."
+    },
+    {
+      "id": 2,
+      "type": "concept-a-anime",
+      "concept_ko": "컨셉 A 애니메. 상단 2/3에 같은 구도(테슬라↔머스크↔SpaceX)를 애니메 스타일로. 빨간 사슬이 두 로고를 연결. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Vibrant anime-style illustration with bold ink outlines. On the left, a glowing Tesla 'T' logo in red. On the right, a SpaceX logo. In the center, an anime-styled Elon Musk (CEO of Tesla and SpaceX) with sharp features and an intense scheming expression. Dramatic red chains or energy threads connect the two logos through the central figure. Deep dark blue-black background with vivid red and orange accent lighting. Cel-shaded dramatic atmosphere with exaggerated contrast between the dark background and glowing corporate logos."
+    },
+    {
+      "id": 3,
+      "type": "concept-b-photorealistic",
+      "concept_ko": "컨셉 B 실사. 상단 2/3에 거대한 테슬라 T 로고 중앙 배치, 로고에 빨간 균열이 퍼지며 틈 사이로 SpaceX 로켓이 발사되는 장면. 어두운 배경. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Dark cinematic photograph of a massive Tesla 'T' logo positioned centrally, made of dark metallic material. Deep red cracks and fractures spread across the logo surface, glowing with ominous crimson light. Through the widening cracks, a SpaceX Falcon rocket is visible launching upward with bright orange exhaust flames. Dark moody background with dramatic contrast between the fractured dark metal and the fiery red crack lines. Atmosphere of corporate crisis and hidden forces breaking through."
+    },
+    {
+      "id": 4,
+      "type": "concept-b-anime",
+      "concept_ko": "컨셉 B 애니메. 상단 2/3에 같은 균열 테슬라 로고 + SpaceX 로켓 구도를 애니메로. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Stylized anime illustration of a colossal Tesla 'T' logo cracking apart dramatically in the center of the frame. Vivid red-orange energy bursts through the fracture lines. A stylized SpaceX rocket shoots upward through the central crack with exaggerated fiery trail and speed lines. Bold cel-shaded art with intense contrast between the dark crumbling logo and bright explosive energy. Deep indigo-black background with selective crimson and orange accent lighting."
+    },
+    {
+      "id": 5,
+      "type": "wildcard",
+      "concept_ko": "와일드카드. 상단 2/3에 머스크의 손이 테슬라 주식 차트 위에서 보이지 않는 실을 당기는 인형극 구도. 주가 차트가 SpaceX 방향으로 휘어지는 이미지. 하단 1/3은 어두운 배경만(텍스트 영역).",
+      "prompt_en": "Dark cinematic photograph of Elon Musk's hands (CEO of Tesla and SpaceX) viewed from above, manipulating thin red threads like a puppet master. Below his hands, a stock price chart curves and bends, with the Tesla line being pulled toward a glowing SpaceX logo. The puppet-master composition creates an unsettling sense of hidden control. Deep dark background with dramatic overhead lighting on the hands and selective red glow on the threads. Ominous corporate manipulation atmosphere."
+    }
+  ]
+}
